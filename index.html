@@ -17,13 +17,42 @@
 
 <header class="header">
 
-<div class="container">
+<div class="top-header container">
 
-<div class="logo">
+<div class="logo-left">
+<img src="images/logo.png" alt="Company Logo">
+</div>
+
+
+<div class="company-title-center">
 ARKS Micro Electronics Pvt. Ltd
 </div>
 
-<nav class="nav">
+
+<div class="menu-icon" onclick="toggleDropdown()">
+☰
+
+<div id="dropdownMenu" class="dropdown-menu">
+
+<a href="#">Login</a>
+<a href="#">Careers</a>
+<a href="#">Application</a>
+
+<div class="dropdown-divider"></div>
+
+<a href="#">Embedded Systems</a>
+<a href="#">Telemetry</a>
+<a href="#">Power Electronics</a>
+<a href="#">Communication</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<nav class="nav container">
 
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
@@ -33,8 +62,6 @@ ARKS Micro Electronics Pvt. Ltd
 <a href="contact.html">Contact</a>
 
 </nav>
-
-</div>
 
 </header>
 
@@ -248,3 +275,25 @@ Contact Us Today
 </p>
 
 </footer>
+
+
+
+<script>
+
+function toggleDropdown(){
+
+var menu = document.getElementById("dropdownMenu");
+
+if(menu.style.display === "block"){
+menu.style.display = "none";
+}
+else{
+menu.style.display = "block";
+}
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,31 +1,46 @@
+// CATEGORY SWITCHING FUNCTION
+
 function showCategory(category, button){
 
+// hide all product sections
 let categories = document.querySelectorAll(".product-category");
 
 categories.forEach(function(section){
-
 section.style.display = "none";
-
 });
 
+// show selected category
+let selected = document.querySelector("." + category);
 
-document.querySelector("." + category).style.display = "grid";
+if(selected){
+selected.style.display = "grid";
+}
 
-
-
-/* REMOVE ACTIVE CLASS FROM ALL BUTTONS */
-
+// remove active highlight from all buttons
 let buttons = document.querySelectorAll(".category-btn");
 
 buttons.forEach(function(btn){
-
 btn.classList.remove("active");
-
 });
 
-
-/* ADD ACTIVE CLASS TO CLICKED BUTTON */
-
+// highlight clicked button
 button.classList.add("active");
+
+}
+
+
+
+// DROPDOWN MENU FUNCTION
+
+function toggleDropdown(){
+
+let menu = document.getElementById("dropdownMenu");
+
+if(menu.style.display === "block"){
+menu.style.display = "none";
+}
+else{
+menu.style.display = "block";
+}
 
 }
