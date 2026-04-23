@@ -21,17 +21,11 @@ BODY
 =============================== */
 
 body{
-
 font-family:"Inter", "Segoe UI", Arial, sans-serif;
-
 background:#f6f8fb;
-
 color:#0b1c34;
-
 line-height:1.65;
-
 -webkit-font-smoothing:antialiased;
-
 }
 
 
@@ -40,13 +34,9 @@ CONTAINER SYSTEM
 =============================== */
 
 .container{
-
 width:92%;
-
 max-width:1200px;
-
 margin:auto;
-
 }
 
 
@@ -55,44 +45,29 @@ TYPOGRAPHY SCALE
 =============================== */
 
 h1{
-
 font-size:54px;
-
 font-weight:700;
-
 letter-spacing:-.5px;
-
 }
 
 
 h2{
-
 font-size:42px;
-
 font-weight:600;
-
 margin-bottom:18px;
-
 }
 
 
 h3{
-
 font-size:22px;
-
 font-weight:600;
-
 margin-bottom:10px;
-
 }
 
 
 p{
-
 font-size:17px;
-
 color:#4b5f73;
-
 }
 
 
@@ -101,9 +76,7 @@ SECTION SPACING SYSTEM
 =============================== */
 
 section{
-
 padding:110px 0;
-
 }
 
 
@@ -112,19 +85,12 @@ HEADER
 =============================== */
 
 .header{
-
 background:#071a2f;
-
 padding:18px 0;
-
 box-shadow:0 6px 18px rgba(0,0,0,.15);
-
 position:sticky;
-
 top:0;
-
 z-index:999;
-
 }
 
 
@@ -133,80 +99,53 @@ TOP HEADER STRUCTURE
 =============================== */
 
 .top-header{
-
 position:relative;
-
 display:flex;
-
 align-items:center;
-
 height:72px;
-
 }
 
 
 /* LOGO */
 
 .logo-left{
-
 position:absolute;
-
 left:0;
-
 }
 
 
 .logo-left img{
-
 height:58px;
-
 }
 
 
 /* CENTER TITLE */
 
 .company-title-center{
-
 position:absolute;
-
 left:50%;
-
 transform:translateX(-50%);
-
 color:white;
-
 font-size:23px;
-
 font-weight:600;
-
 letter-spacing:.4px;
-
 }
 
 
 /* MENU ICON */
 
 .menu-icon{
-
 position:absolute;
-
 right:0;
-
 font-size:26px;
-
 color:white;
-
 cursor:pointer;
-
 transition:.25s ease;
-
 }
 
 
 .menu-icon:hover{
-
 transform:scale(1.08);
-
 }
 
 
@@ -215,39 +154,25 @@ NAVIGATION BAR
 =============================== */
 
 .nav{
-
 display:flex;
-
 justify-content:center;
-
 gap:38px;
-
 margin-top:10px;
-
 }
 
 
 .nav a{
-
 color:#c9d6e3;
-
 text-decoration:none;
-
 font-size:15px;
-
 font-weight:500;
-
 letter-spacing:.3px;
-
 transition:.25s ease;
-
 }
 
 
 .nav a:hover{
-
 color:#1f6feb;
-
 }
 
 
@@ -256,46 +181,28 @@ DROPDOWN MENU
 =============================== */
 
 .dropdown-menu{
-
 display:none;
-
 position:absolute;
-
 right:0;
-
 top:44px;
-
 background:#0b2a4a;
-
 min-width:200px;
-
 border-radius:6px;
-
 overflow:hidden;
-
 box-shadow:0 12px 28px rgba(0,0,0,.35);
-
 animation:fadeDropdown .2s ease;
-
 }
 
 
 @keyframes fadeDropdown{
-
 from{
-
 opacity:0;
-
 transform:translateY(-8px);
-
 }
 
 to{
-
 opacity:1;
-
 transform:translateY(0);
-
 }
 
 }
@@ -304,41 +211,27 @@ transform:translateY(0);
 /* DROPDOWN LINKS */
 
 .dropdown-menu a{
-
 display:block;
-
 padding:12px 18px;
-
 font-size:14px;
-
 color:#e2edf7;
-
 text-decoration:none;
-
 transition:.2s ease;
-
 }
 
 
 .dropdown-menu a:hover{
-
 background:#123b66;
-
 padding-left:24px;
-
 }
 
 
 /* DIVIDER */
 
 .dropdown-divider{
-
 height:1px;
-
 background:#244e75;
-
 margin:6px 0;
-
 }
 
 
@@ -347,72 +240,44 @@ BUTTON SYSTEM
 =============================== */
 
 .btn,
-
 .btn-primary{
-
 display:inline-block;
-
 padding:14px 38px;
-
 border-radius:40px;
-
 background:#1f6feb;
-
 color:white;
-
 text-decoration:none;
-
 font-weight:600;
-
 letter-spacing:.3px;
-
 transition:.3s ease;
-
 box-shadow:0 6px 22px rgba(31,111,235,.35);
-
 }
 
 
 .btn:hover,
-
 .btn-primary:hover{
-
 background:#175ed1;
-
 transform:translateY(-2px);
-
 }
 
 
 /* OUTLINE BUTTON */
 
 .btn-outline{
-
 padding:14px 38px;
-
 border-radius:40px;
-
 border:2px solid #1f6feb;
-
 color:#1f6feb;
-
 text-decoration:none;
-
 font-weight:600;
-
 transition:.3s ease;
-
 }
 
 
 .btn-outline:hover{
-
 background:#1f6feb;
-
 color:white;
-
 }
-
 
 
 
@@ -421,78 +286,49 @@ HERO SECTION
 =============================== */
 
 .hero{
-
 background:
 linear-gradient(135deg,#06192c 0%, #0b2a4a 60%, #133b63 100%);
-
 color:white;
-
 text-align:center;
-
 padding:160px 0 150px 0;
-
 position:relative;
-
 overflow:hidden;
-
 }
 
 
 /* subtle engineering glow layer */
 
 .hero::after{
-
 content:"";
-
 position:absolute;
-
 width:600px;
-
 height:600px;
-
 background:radial-gradient(circle, rgba(31,111,235,.25) 0%, transparent 70%);
-
 top:-120px;
-
 right:-150px;
-
 z-index:0;
-
 }
 
 
 .hero .container{
-
 position:relative;
-
 z-index:1;
-
 }
 
 
 .hero h1{
-
 font-size:56px;
-
 margin-bottom:26px;
-
 letter-spacing:-.4px;
-
 }
 
 
 .hero p{
-
 max-width:720px;
-
 margin:auto;
-
 font-size:19px;
-
 color:#c7d6e6;
-
 margin-bottom:40px;
-
 }
 
 
@@ -501,52 +337,33 @@ SECTION TITLE BLOCK SYSTEM
 =============================== */
 
 .section-tag{
-
 display:inline-block;
-
 padding:6px 18px;
-
 border-radius:20px;
-
 background:#e8f0ff;
-
 color:#1f6feb;
-
 font-size:13px;
-
 font-weight:600;
-
 letter-spacing:.8px;
-
 margin-bottom:14px;
-
 }
 
 
 .section-heading{
-
 text-align:center;
-
 margin-bottom:60px;
-
 }
 
 
 .section-heading h2{
-
 margin-bottom:10px;
-
 }
 
 
 .section-heading p{
-
 max-width:650px;
-
 margin:auto;
-
 color:#5b6f82;
-
 }
 
 
@@ -555,40 +372,28 @@ ABOUT PREVIEW SECTION
 =============================== */
 
 .about-preview{
-
 background:white;
-
 text-align:center;
-
 padding:120px 0;
-
 }
 
 
 .about-preview h2{
-
 margin-bottom:22px;
-
 }
 
 
 .about-preview p{
-
 max-width:720px;
-
 margin:auto;
-
 margin-bottom:36px;
-
 }
 
 
 /* CTA spacing refinement */
 
 .about-preview .btn{
-
 margin-top:6px;
-
 }
 
 
@@ -597,154 +402,100 @@ CLIENTS SECTION
 =============================== */
 
 .clients{
-
 background:#eef3f8;
-
 text-align:center;
-
 padding:130px 0;
-
 }
 
 
 .clients-heading{
-
 margin-bottom:60px;
-
 }
 
 
 .clients-tag{
-
 display:inline-block;
-
 padding:6px 18px;
-
 border-radius:20px;
-
 background:#e8f0ff;
-
 color:#1f6feb;
-
 font-size:13px;
-
 font-weight:600;
-
 letter-spacing:.8px;
-
 margin-bottom:10px;
-
 }
 
 
 .clients-heading h2{
-
 margin-bottom:8px;
-
 }
 
 
 .clients-subtitle{
-
 color:#5b6f82;
-
 font-size:18px;
-
 }
 
 
 /* CLIENT GRID */
 
 .client-grid{
-
 display:grid;
-
 grid-template-columns:repeat(5,1fr);
-
 gap:35px;
-
 margin-top:40px;
-
 }
 
 
 /* CLIENT CARD */
 
 .client-item{
-
 background:white;
-
 padding:28px;
-
 border-radius:12px;
-
 border:1px solid #e3ebf5;
-
 transition:.35s ease;
-
 position:relative;
-
 overflow:hidden;
-
 }
 
 
 .client-item::after{
-
 content:"";
-
 position:absolute;
 
 inset:0;
-
 background:linear-gradient(120deg, transparent, rgba(31,111,235,.08), transparent);
-
 opacity:0;
-
 transition:.4s ease;
-
 }
 
 
 .client-item:hover{
-
 transform:translateY(-6px);
-
 box-shadow:0 14px 34px rgba(0,0,0,.08);
-
 }
 
 
 .client-item:hover::after{
-
 opacity:1;
-
 }
 
 
 .client-item img{
-
 width:120px;
-
 height:80px;
-
 object-fit:contain;
-
 margin-bottom:8px;
-
 }
 
 
 /* CLIENT LABEL */
 
 .client-item p{
-
 font-size:14px;
-
 font-weight:600;
-
 color:#0b1c34;
-
 }
 
 
@@ -3489,5 +3240,354 @@ FINAL BUTTON CONSISTENCY
 button{
 
 font-family:"Inter", sans-serif;
+
+}
+
+
+
+/* =====================================================
+MOBILE RESPONSIVE DESIGN (≤768px)
+Add this at the END of style.css
+Desktop layout remains unchanged
+===================================================== */
+
+@media (max-width:768px){
+
+/* CONTAINER WIDTH */
+
+.container{
+width:92%;
+}
+
+
+/* TYPOGRAPHY SCALE */
+
+h1{
+font-size:34px;
+}
+
+h2{
+font-size:28px;
+}
+
+h3{
+font-size:20px;
+}
+
+p{
+font-size:15px;
+}
+
+
+/* GLOBAL SECTION SPACING */
+
+section{
+padding:70px 0;
+}
+
+
+/* HEADER LAYOUT */
+
+/* PROFESSIONAL MOBILE HEADER LAYOUT */
+
+.top-header{
+display:grid;
+grid-template-columns:auto 1fr auto;
+align-items:center;
+padding:12px 14px;
+row-gap:4px;
+}
+
+
+/* LOGO */
+
+.logo-left{
+grid-column:1;
+grid-row:1 / span 2;
+display:flex;
+align-items:center;
+}
+
+.logo-left img{
+height:42px;
+}
+
+
+/* COMPANY TITLE */
+
+.company-title-center{
+font-size:clamp(13px, 3.2vw, 15px);
+font-weight:600;
+letter-spacing:.2px;
+}
+
+/* MENU ICON */
+
+.menu-icon{
+grid-column:3;
+grid-row:1 / span 2;
+font-size:22px;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:flex-end;
+}
+
+
+/* NAVIGATION STACK */
+
+.nav{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-top:14px;
+text-align:center;
+}
+
+.nav a{
+padding:8px 0;
+}
+
+
+/* HERO SECTION */
+
+.hero{
+padding:100px 12px 90px 12px;
+}
+
+.hero h1{
+font-size:34px;
+line-height:1.3;
+}
+
+.hero p{
+font-size:16px;
+}
+
+
+/* CLIENT GRID */
+
+.client-grid{
+grid-template-columns:repeat(1,1fr);
+gap:18px;
+}
+
+.client-item img{
+width:90px;
+height:auto;
+}
+
+.client-item{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+/* PRODUCTS PREVIEW GRID */
+
+.product-grid{
+grid-template-columns:1fr;
+gap:24px;
+}
+
+
+/* SERVICES PREVIEW GRID */
+
+.service-grid{
+grid-template-columns:1fr;
+gap:24px;
+}
+
+
+/* STRENGTHS GRID */
+
+.strengths-grid{
+grid-template-columns:1fr;
+gap:28px;
+}
+
+
+/* PROJECT GRID (HOME PAGE) */
+
+.project-grid{
+grid-template-columns:1fr;
+gap:24px;
+}
+
+
+/* CONTACT STRIP BUTTONS */
+
+.contact-buttons{
+flex-direction:column;
+gap:16px;
+}
+
+
+/* PROCESS GRID (HOW WE WORK) */
+
+.process-grid{
+grid-template-columns:1fr;
+gap:28px;
+}
+
+.process-grid::before{
+display:none;
+}
+
+
+/* ABOUT PAGE GRID */
+
+.about-grid{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+
+/* VISION / MISSION GRID */
+
+.vision-mission-grid{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+
+/* WHY ARKS GRID */
+
+.why-grid{
+grid-template-columns:1fr;
+gap:24px;
+}
+
+
+/* PRODUCTS PAGE CATEGORY BAR */
+
+.category-bar{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+width:100%;
+}
+
+.category-btn{
+width:100%;
+text-align:center;
+font-size:14px;
+padding:10px 12px;
+}
+
+
+
+/* PRODUCT CATEGORY GRID */
+
+.product-category{
+grid-template-columns:1fr;
+gap:24px;
+}
+
+
+/* SERVICES PAGE GRID */
+
+.services-grid{
+grid-template-columns:1fr;
+gap:24px;
+}
+
+
+/* PROJECTS PAGE GRID */
+
+.projects-grid{
+grid-template-columns:1fr;
+gap:24px;
+}
+
+
+/* CONTACT PAGE LAYOUT */
+
+.contact-layout{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+
+/* CONTACT FORM */
+
+.contact-form{
+padding:28px;
+}
+
+
+/* CAREERS GRID */
+
+.careers-grid{
+grid-template-columns:1fr;
+gap:28px;
+}
+
+
+/* FOOTER GRID */
+
+.footer-grid{
+grid-template-columns:1fr;
+gap:30px;
+text-align:center;
+}
+
+
+/* DROPDOWN MENU POSITION FIX */
+
+.dropdown-menu{
+right:10px;
+top:50px;
+}
+
+
+/* BUTTON SIZE IMPROVEMENT */
+
+.btn,
+.btn-primary,
+.btn-outline{
+padding:12px 26px;
+font-size:14px;
+}
+
+
+/* PAGE TITLE SECTION */
+
+.page-title{
+padding:90px 0;
+}
+
+.page-title h1{
+font-size:32px;
+}
+
+
+/* CAREERS HERO */
+
+.careers-hero{
+height:auto;
+padding:90px 0;
+}
+
+.careers-hero h1{
+font-size:32px;
+}
+
+
+/* DISCUSS PROJECT BUTTON GROUP */
+
+.discuss-buttons{
+flex-direction:column;
+gap:16px;
+}
+
+
+/* PRODUCT CARD IMAGE HEIGHT */
+
+.product-card img{
+height:auto;
+}
 
 }

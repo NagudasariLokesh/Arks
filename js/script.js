@@ -36,11 +36,10 @@ function toggleDropdown(){
 
 let menu = document.getElementById("dropdownMenu");
 
-if(menu.style.display === "block"){
-menu.style.display = "none";
-}
-else{
-menu.style.display = "block";
-}
+let header = document.querySelector(".header");
+
+menu.classList.toggle("open");
+
+header.classList.toggle("active");
 
 }
