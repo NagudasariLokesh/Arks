@@ -1,45 +1,53 @@
-// CATEGORY SWITCHING FUNCTION
-
-function showCategory(category, button){
-
-// hide all product sections
-let categories = document.querySelectorAll(".product-category");
-
-categories.forEach(function(section){
-section.style.display = "none";
-});
-
-// show selected category
-let selected = document.querySelector("." + category);
-
-if(selected){
-selected.style.display = "grid";
-}
-
-// remove active highlight from all buttons
-let buttons = document.querySelectorAll(".category-btn");
-
-buttons.forEach(function(btn){
-btn.classList.remove("active");
-});
-
-// highlight clicked button
-button.classList.add("active");
-
-}
-
-
-
-// DROPDOWN MENU FUNCTION
+// ===============================
+// MOBILE DROPDOWN MENU TOGGLE
+// ===============================
 
 function toggleDropdown(){
 
 let menu = document.getElementById("dropdownMenu");
 
-let header = document.querySelector(".header");
-
 menu.classList.toggle("open");
 
-header.classList.toggle("active");
+}
+
+
+
+// ===============================
+// CLOSE MENU WHEN CLICKING OUTSIDE
+// ===============================
+
+document.addEventListener("click", function(event){
+
+let menu = document.getElementById("dropdownMenu");
+
+let toggle = document.querySelector(".menu-toggle");
+
+if(menu.classList.contains("open")){
+
+if(!menu.contains(event.target) && !toggle.contains(event.target)){
+
+menu.classList.remove("open");
 
 }
+
+}
+
+});
+
+
+
+// ===============================
+// CLOSE MENU WHEN SCREEN RESIZES
+// ===============================
+
+window.addEventListener("resize", function(){
+
+let menu = document.getElementById("dropdownMenu");
+
+if(window.innerWidth > 768){
+
+menu.classList.remove("open");
+
+}
+
+});

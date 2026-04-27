@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ARKS Micro Electronics</title>
+<title>ARKS Micro Electronics India Pvt. Ltd.</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -13,140 +14,188 @@
 
 </head>
 
+
 <body>
+
+
+<!-- HEADER -->
 
 <header class="header">
 
-<div class="top-header container">
+<div class="container header-container">
 
-<div class="logo-left">
-<img src="images/logo.png" alt="Company Logo">
+<div class="logo-area">
+<img src="images/logo.png" alt="ARKS Micro Electronics Logo">
 </div>
 
-
-<div class="company-title-center">
-ARKS Micro Electronics India Pvt. Ltd
+<div class="company-title">
+ARKS Micro Electronics India Pvt. Ltd.
 </div>
 
-
-<div class="menu-icon" onclick="toggleDropdown()">
-☰
-
-<div id="dropdownMenu" class="dropdown-menu">
-
-<a href="#">Login</a>
-<a href="careers.html">Careers</a>
-<a href="#">Application</a>
-
-<div class="dropdown-divider"></div>
-
-<a href="#">Embedded Systems</a>
-<a href="#">Telemetry</a>
-<a href="#">Power Electronics</a>
-<a href="#">Communication</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<nav class="nav container">
+<nav class="main-nav">
 
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="products.html">Products</a>
 <a href="services.html">Services</a>
 <a href="projects.html">Projects</a>
+<a href="careers.html">Careers</a>
 <a href="contact.html">Contact</a>
 
 </nav>
 
+<div class="menu-toggle" onclick="toggleDropdown()">☰</div>
+
+</div>
+
+
+<div id="dropdownMenu" class="dropdown-menu">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="products.html">Products</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="careers.html">Careers</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
 </header>
 
-<section class="hero">
 
-<div class="container">
 
-<h1>Advanced Embedded & Electronics Solutions</h1>
+<!-- HERO SECTION WITH VIDEO BACKGROUND -->
+
+<section class="hero-video">
+
+<video autoplay muted loop playsinline class="hero-bg-video">
+<source src="videos/engineering-bg.mp4" type="video/mp4">
+</video>
+
+<div class="hero-overlay"></div>
+
+<div class="container hero-content">
+
+<h1>
+Embedded Electronics Solutions for Defence & Industrial Systems
+</h1>
 
 <p>
-Delivering reliable hardware and software solutions
-for mission-critical engineering applications.
+Supporting subsystem development across DRDO laboratories,
+BEL platforms, NSTL programs, and strategic automation environments.
 </p>
 
-<a href="products.html" class="btn">
-Explore Products
+<div class="hero-buttons">
+
+<a href="products.html" class="btn-primary">
+Explore Capabilities
 </a>
+
+<a href="contact.html" class="btn-outline">
+Contact Engineering Team
+</a>
+
+</div>
 
 </div>
 
 </section>
 
-<section class="about-preview">
 
-<div class="container">
 
-<h2>About Our Company</h2>
+<!-- CAPABILITY STRIP -->
 
-<p>
+<section class="capabilities-strip">
 
-We specialize in embedded systems, telemetry solutions,
-power electronics, and communication technologies
-designed for industrial and mission-critical applications.
+<div class="container capabilities-grid">
 
-</p>
+<div class="capability-item">
+<h3>Embedded Systems</h3>
+<p>Controller boards and real-time firmware platforms.</p>
+</div>
 
-<a href="about.html" class="btn">
-Read More
-</a>
+<div class="capability-item">
+<h3>Telemetry Systems</h3>
+<p>Multi-channel acquisition and monitoring solutions.</p>
+</div>
+
+<div class="capability-item">
+<h3>Power Electronics</h3>
+<p>Stable regulated modules for embedded environments.</p>
+</div>
+
+<div class="capability-item">
+<h3>Communication Interfaces</h3>
+<p>CAN, RS-485, and subsystem connectivity platforms.</p>
+</div>
+
+<div class="capability-item">
+<h3>Defence Integration</h3>
+<p>Subsystem support aligned with DRDO ecosystems.</p>
+</div>
+
+<div class="capability-item">
+<h3>Industrial Automation</h3>
+<p>Embedded monitoring and control architectures.</p>
+</div>
 
 </div>
 
 </section>
 
-<section class="clients">
+
+
+<!-- STRATEGIC ORGANIZATIONS -->
+
+<section class="strategic-orgs">
 
 <div class="container">
 
-<div class="clients-heading">
+<div class="section-heading">
 
-<span class="clients-tag">OUR CLIENTS</span>
+<span class="section-tag">
+STRATEGIC COLLABORATIONS
+</span>
 
-<h2>Trusted By Leading Organizations</h2>
+<h2>
+Supporting National Defence & Engineering Programs
+</h2>
 
-<p class="clients-subtitle">
-We serve India's premier defense organizations
+<p>
+Providing embedded platforms and subsystem electronics
+across strategic laboratories and public sector programs.
 </p>
 
 </div>
 
-<div class="client-grid">
 
-<div class="client-item">
-<img src="images/clients/nstl.png" alt="NSTL">
-<p>NSTL</p>
-</div>
+<div class="org-grid">
 
-<div class="client-item">
-<img src="images/clients/bdl.png" alt="BDL">
+
+<div class="org-card">
+<img src="images/clients/bdl.png">
 <p>BDL</p>
 </div>
 
-<div class="client-item">
-<img src="images/clients/bhel.png" alt="BHEL">
-<p>Bharat Electronics Limited</p>
+<div class="org-card">
+<img src="images/clients/nstl.png">
+<p>NSTL</p>
 </div>
 
-<div class="client-item">
-<img src="images/clients/incois.png" alt="INCOIS">
+<div class="org-card">
+<img src="images/clients/drdo_tbrl.png">
+<p>TBRL</p>
+</div>
+
+<div class="org-card">
+<img src="images/clients/incois.png">
 <p>INCOIS</p>
 </div>
 
-<div class="client-item">
-<img src="images/clients/drdo_tbrl.png" alt="DRDO_TBRL">
-<p>DRDO (TBRL)</p>
+<div class="org-card">
+<img src="images/clients/bhel.png">
+<p>BHEL</p>
 </div>
 
 </div>
@@ -156,168 +205,249 @@ We serve India's premier defense organizations
 </section>
 
 
-<section class="products-preview">
+
+<!-- TECHNOLOGY DOMAINS -->
+
+<section class="technology-domains">
 
 <div class="container">
 
-<h2>Our Products</h2>
+<div class="section-heading">
 
-<div class="product-grid">
+<span class="section-tag">
+CORE TECHNOLOGY DOMAINS
+</span>
 
-<div class="card">
-<h3>Embedded Systems</h3>
-<p>Custom-designed embedded solutions for industrial applications.</p>
-<a href="products.html">View More</a>
-</div>
+<h2>
+Engineering Expertise Across Embedded Platforms
+</h2>
 
-<div class="card">
-<h3>Telemetry Systems</h3>
-<p>Reliable telemetry monitoring and control systems.</p>
-<a href="products.html">View More</a>
-</div>
-
-<div class="card">
-<h3>Power Electronics</h3>
-<p>Efficient and stable power supply modules.</p>
-<a href="products.html">View More</a>
-</div>
-
-</div>
-
-<div class="view-products-btn-wrapper">
-
-<a href="products.html" class="view-products-btn">
-VIEW ALL PRODUCTS
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="services-preview">
-
-<div class="container">
-
-<h2>Our Services</h2>
-
-<div class="service-grid">
-
-<div class="service-box">
-<h3>Hardware Design</h3>
-<p>End-to-end electronic hardware development solutions.</p>
-</div>
-
-<div class="service-box">
-<h3>System Integration</h3>
-<p>Seamless integration of hardware and software platforms.</p>
-</div>
-
-<div class="service-box">
-<h3>Testing & Validation</h3>
-<p>Comprehensive product testing and certification support.</p>
-</div>
-
-</div>
-
-<div class="view-services-btn-wrapper">
-
-<a href="services.html" class="view-services-btn">
-VIEW ALL SERVICES
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- OUR STRENGTHS SECTION -->
-
-<section class="strengths-section">
-
-<div class="container">
-
-<span class="strengths-tag">WHY CHOOSE US</span>
-
-<h2 class="strengths-title">Our Strengths</h2>
-
-<p class="strengths-subtitle">
-What sets us apart in the defense technology sector
+<p>
+Designing controllers, telemetry systems, communication interfaces,
+and power electronics for mission-critical applications.
 </p>
+
+</div>
+
+
+<div class="domains-grid">
+
+<div class="domain-card">
+<h3>Embedded Controllers</h3>
+<p>Custom processing platforms for control applications.</p>
+</div>
+
+<div class="domain-card">
+<h3>Telemetry Platforms</h3>
+<p>Sensor monitoring and structured acquisition systems.</p>
+</div>
+
+<div class="domain-card">
+<h3>Power Modules</h3>
+<p>Reliable supply systems for embedded electronics.</p>
+</div>
+
+<div class="domain-card">
+<h3>Communication Systems</h3>
+<p>Industrial and defence interface architectures.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PRODUCTS OVERVIEW -->
+
+<section class="products-overview">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-tag">
+ENGINEERING PLATFORMS
+</span>
+
+<h2>
+Embedded Hardware Solutions for Strategic Applications
+</h2>
+
+<p>
+Controller units, telemetry platforms, communication modules,
+and validation systems supporting laboratory deployments.
+</p>
+
+</div>
+
+
+<div class="products-grid">
+
+<div class="product-card">
+<h3>Embedded Controllers</h3>
+<p>Real-time control architectures.</p>
+<a href="products.html" class="card-link">Explore →</a>
+</div>
+
+<div class="product-card">
+<h3>Telemetry Units</h3>
+<p>Multi-channel monitoring platforms.</p>
+<a href="products.html" class="card-link">Explore →</a>
+</div>
+
+<div class="product-card">
+<h3>Power Modules</h3>
+<p>Stable embedded supply systems.</p>
+<a href="products.html" class="card-link">Explore →</a>
+</div>
+
+<div class="product-card">
+<h3>Communication Interfaces</h3>
+<p>CAN and serial connectivity modules.</p>
+<a href="products.html" class="card-link">Explore →</a>
+</div>
+
+<div class="product-card">
+<h3>Testing Equipment</h3>
+<p>Instrumentation validation platforms.</p>
+<a href="products.html" class="card-link">Explore →</a>
+</div>
+
+<div class="product-card">
+<h3>Custom Platforms</h3>
+<p>Application-specific subsystem electronics.</p>
+<a href="products.html" class="card-link">Explore →</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section class="services-overview">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-tag">
+ENGINEERING SERVICES
+</span>
+
+<h2>
+Embedded Design, Integration & Lifecycle Support
+</h2>
+
+<p>
+Providing hardware design, firmware development, telemetry systems,
+and subsystem validation support.
+</p>
+
+</div>
+
+
+<div class="services-grid">
+
+<div class="service-card">
+<h3>Hardware Design</h3>
+<p>Controller and PCB platform development.</p>
+</div>
+
+<div class="service-card">
+<h3>Firmware Development</h3>
+<p>Real-time embedded software solutions.</p>
+</div>
+
+<div class="service-card">
+<h3>Telemetry Systems</h3>
+<p>Monitoring and acquisition architectures.</p>
+</div>
+
+<div class="service-card">
+<h3>Communication Interfaces</h3>
+<p>Subsystem connectivity modules.</p>
+</div>
+
+<div class="service-card">
+<h3>Testing Support</h3>
+<p>Validation and calibration environments.</p>
+</div>
+
+<div class="service-card">
+<h3>Lifecycle Maintenance</h3>
+<p>Upgrade and redesign assistance.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- STRENGTHS -->
+
+<section class="engineering-strengths">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-tag">
+ENGINEERING STRENGTHS
+</span>
+
+<h2>
+Trusted Embedded Electronics Development Capability
+</h2>
+
+<p>
+Supporting defence laboratories and automation programs
+with reliable subsystem platforms.
+</p>
+
+</div>
 
 
 <div class="strengths-grid">
 
+<div class="strength-card">
+<h3>Defence Exposure</h3>
+<p>Experience across DRDO ecosystems.</p>
+</div>
 
 <div class="strength-card">
-
-<div class="strength-icon">🏭</div>
-
-<h3>Make in India</h3>
-
-<p>
-100% indigenous design and manufacturing capabilities
-</p>
-
+<h3>Indigenous Design</h3>
+<p>Locally engineered embedded platforms.</p>
 </div>
-
 
 <div class="strength-card">
-
-<div class="strength-icon">🏅</div>
-
-<h3>Quality Certified</h3>
-
-<p>
-ISO 9001:2015 certified with rigorous quality processes
-</p>
-
+<h3>High Reliability</h3>
+<p>Subsystem architectures for demanding environments.</p>
 </div>
-
 
 <div class="strength-card">
-
-<div class="strength-icon">⏱</div>
-
-<h3>14+ Years Legacy</h3>
-
-<p>
-Decades of experience in Embedded systems & electronics
-</p>
-
+<h3>Multi-Domain Capability</h3>
+<p>Controllers, telemetry, interfaces, power modules.</p>
 </div>
 
-
+<div class="strength-card">
+<h3>Custom Development</h3>
+<p>Application-specific electronics solutions.</p>
 </div>
 
-</div>
-
-</section>
-
-<section class="projects-preview">
-
-<div class="container">
-
-<h2>Our Projects</h2>
-
-<div class="project-grid">
-
-<div class="project-card">
-<h3>Telemetry Monitoring System</h3>
-<p>Advanced real-time monitoring platform.</p>
-</div>
-
-<div class="project-card">
-<h3>Power Control Unit</h3>
-<p>High-efficiency intelligent power controller.</p>
-</div>
-
-<div class="project-card">
-<h3>Secure Communication Interface</h3>
-<p>Reliable encrypted communication solution.</p>
+<div class="strength-card">
+<h3>Lifecycle Support</h3>
+<p>Upgrade and maintenance assistance.</p>
 </div>
 
 </div>
@@ -327,26 +457,94 @@ Decades of experience in Embedded systems & electronics
 </section>
 
 
-<section class="contact-strip">
+
+<!-- PROJECT EXPERIENCE -->
+
+<section class="projects-overview">
 
 <div class="container">
 
-<h2 class="contact-title">
-Ready to Partner with Us?
+<div class="section-heading">
+
+<span class="section-tag">
+PROJECT EXPERIENCE
+</span>
+
+<h2>
+Subsystem Platforms Across Strategic Applications
 </h2>
 
-<p class="contact-subtitle">
-Let's work together to build advanced defense technology solutions and embedded systems for a safer tomorrow.
+<p>
+Telemetry systems, embedded controllers, communication modules,
+and validation platforms for laboratory environments.
 </p>
 
-<div class="contact-buttons">
+</div>
+
+
+<div class="projects-grid">
+
+<div class="project-card">
+<h3>Telemetry Monitoring</h3>
+<p>Sensor acquisition platforms.</p>
+</div>
+
+<div class="project-card">
+<h3>Embedded Control Units</h3>
+<p>Automation coordination systems.</p>
+</div>
+
+<div class="project-card">
+<h3>Power Regulation Modules</h3>
+<p>Stable electronics supply systems.</p>
+</div>
+
+<div class="project-card">
+<h3>Communication Interfaces</h3>
+<p>Distributed subsystem connectivity.</p>
+</div>
+
+<div class="project-card">
+<h3>Automation Controllers</h3>
+<p>Industrial monitoring architectures.</p>
+</div>
+
+<div class="project-card">
+<h3>Data Loggers</h3>
+<p>Structured acquisition platforms.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CTA -->
+
+<section class="collaboration-cta">
+
+<div class="container">
+
+<h2>
+Partner With Us for Embedded Electronics Development
+</h2>
+
+<p>
+Supporting defence laboratories and automation programs
+with reliable subsystem engineering solutions.
+</p>
+
+<div class="cta-buttons">
 
 <a href="contact.html" class="btn-primary">
-CONTACT US
+Discuss Your Requirement
 </a>
 
 <a href="products.html" class="btn-outline">
-EXPLORE PRODUCTS
+Explore Platforms
 </a>
 
 </div>
@@ -355,56 +553,102 @@ EXPLORE PRODUCTS
 
 </section>
 
+
+
+<!-- FOOTER -->
 
 <footer class="footer">
 
 <div class="container footer-grid">
 
-<div>
-<h3>Address</h3>
-<p>Padmanayani Nilayan, Sapthagiri nagar, Chinnamushidiwada, Vishakhapatnam, 530051.</p>
-</div>
+<div class="footer-about">
 
-<div>
-<h4>Contact</h4>
-<p>Visakhapatnam, India</p>
-<p>+91-XXXXXXXXXX</p>
-<p>info@company.com</p>
-</div>
+<h3>ARKS Micro Electronics India Pvt. Ltd.</h3>
 
-<div>
-<h4>Quick Links</h4>
-<p><a href="about.html">About</a></p>
-<p><a href="products.html">Products</a></p>
-<p><a href="services.html">Services</a></p>
-</div>
-
-</div>
-
-<p class="copyright">
-© 2026 ARKS Micro Electronics Pvt. Ltd. All rights reserved.
+<p>
+Embedded electronics platforms supporting defence laboratories
+and industrial automation environments.
 </p>
+
+</div>
+
+
+<div>
+
+<h4>Core Capabilities</h4>
+
+<ul>
+
+<li>Embedded Systems</li>
+<li>Telemetry Platforms</li>
+<li>Power Electronics</li>
+<li>Communication Interfaces</li>
+<li>Testing Systems</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>Strategic Ecosystem</h4>
+
+<ul>
+
+<li>DRDO</li>
+<li>BEL</li>
+<li>NSTL</li>
+<li>TBRL</li>
+<li>INCOIS</li>
+<li>BHEL</li>
+
+</ul>
+
+</div>
+
+
+<div class="footer-links">
+
+<h4>Quick Links</h4>
+
+<ul>
+
+<li><a href="about.html">About</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>Contact</h4>
+
+<p>Visakhapatnam, India</p>
+<p>Email: info@arksme.com</p>
+<p>Phone: +91-XXXXXXXXXX</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+© 2026 ARKS Micro Electronics India Pvt. Ltd. All rights reserved.
+</p>
+
+</div>
 
 </footer>
 
-
-
-<script>
-
-function toggleDropdown(){
-
-var menu = document.getElementById("dropdownMenu");
-
-if(menu.style.display === "block"){
-menu.style.display = "none";
-}
-else{
-menu.style.display = "block";
-}
-
-}
-
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

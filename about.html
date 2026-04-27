@@ -6,131 +6,149 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About Us</title>
+<title>About | ARKS Micro Electronics India Pvt. Ltd.</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 
 </head>
 
+
 <body>
 
 
-<!-- HEADER START -->
+<!-- HEADER -->
 
 <header class="header">
 
-<div class="top-header container">
+<div class="container header-container">
 
-<div class="logo-left">
-<img src="images/logo.png" alt="Company Logo">
+<div class="logo-area">
+<img src="images/logo.png" alt="ARKS Micro Electronics Logo">
 </div>
 
-
-<div class="company-title-center">
-ARKS Micro Electronics India Pvt. Ltd
+<div class="company-title">
+ARKS Micro Electronics India Pvt. Ltd.
 </div>
 
-
-<div class="menu-icon" onclick="toggleDropdown()">
-☰
-
-<div id="dropdownMenu" class="dropdown-menu">
-
-<a href="#">Login</a>
-<a href="#">Careers</a>
-<a href="#">Application</a>
-
-<div class="dropdown-divider"></div>
-
-<a href="#">Embedded Systems</a>
-<a href="#">Telemetry</a>
-<a href="#">Power Electronics</a>
-<a href="#">Communication</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<nav class="nav container">
+<nav class="main-nav">
 
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="products.html">Products</a>
 <a href="services.html">Services</a>
 <a href="projects.html">Projects</a>
+<a href="careers.html">Careers</a>
 <a href="contact.html">Contact</a>
 
 </nav>
 
+<div class="menu-toggle" onclick="toggleDropdown()">☰</div>
+
+</div>
+
+
+<div id="dropdownMenu" class="dropdown-menu">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="products.html">Products</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="careers.html">Careers</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
 </header>
 
-<!-- HEADER END -->
 
 
-<!-- ABOUT PAGE TITLE -->
+<!-- HERO TITLE -->
 
-<section class="page-title">
+<section class="hero">
+
+<div class="container hero-content">
+
+<h1>
+Embedded Electronics Engineering for Strategic Defence Systems
+</h1>
+
+<p>
+Supporting subsystem development across defence laboratories,
+naval instrumentation environments, and automation platforms.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- COMPANY PROFILE -->
+
+<section>
 
 <div class="container">
 
-<h1>About ARKS Micro Electronics India Pvt. Ltd.</h1>
+<div class="section-heading">
+
+<span class="section-tag">COMPANY PROFILE</span>
+
+<h2>
+Subsystem Electronics Development Supporting Strategic Programs
+</h2>
 
 <p>
-Engineering advanced embedded electronics solutions for defense,
-industrial automation, and mission-critical applications.
+ARKS Micro Electronics India Pvt. Ltd. develops embedded controller platforms,
+telemetry systems, communication interfaces, and regulated power modules
+for defence laboratories and industrial automation environments.
 </p>
+
+</div>
+
+<img src="images/about/lab.png" alt="Engineering Lab" style="width:100%; border-radius:12px; margin-top:30px;">
 
 </div>
 
 </section>
 
 
-<!-- COMPANY OVERVIEW SECTION -->
 
-<section class="about-section">
+<!-- ENGINEERING CAPABILITIES -->
 
-<div class="container about-grid">
+<section class="capabilities-strip">
 
-<div>
+<div class="container capabilities-grid">
 
-<h2>Company Overview</h2>
-
-<p>
-ARKS Micro Electronics India Pvt. Ltd. specializes in the design,
-development, and deployment of high-reliability embedded electronic
-systems for defense, aerospace support environments, telemetry,
-and industrial automation sectors.
-</p>
-
-<p>
-With decades of engineering experience and strong collaboration with
-national research organizations, we deliver mission-ready solutions
-built for performance, precision, and long-term reliability.
-</p>
-
+<div class="capability-item">
+<h3>Embedded Controllers</h3>
+<p>Custom processing platforms for control environments.</p>
 </div>
 
-<div class="about-highlight-box">
+<div class="capability-item">
+<h3>Telemetry Platforms</h3>
+<p>Structured acquisition and monitoring systems.</p>
+</div>
 
-<h3>Core Expertise</h3>
+<div class="capability-item">
+<h3>Communication Interfaces</h3>
+<p>CAN and serial subsystem connectivity modules.</p>
+</div>
 
-<ul>
+<div class="capability-item">
+<h3>Power Electronics</h3>
+<p>Reliable supply platforms for embedded deployments.</p>
+</div>
 
-<li>Embedded System Design</li>
+<div class="capability-item">
+<h3>Validation Support</h3>
+<p>Instrumentation platforms for subsystem testing.</p>
+</div>
 
-<li>Telemetry & Data Acquisition Systems</li>
-
-<li>Power Electronics Modules</li>
-
-<li>Communication Interfaces</li>
-
-<li>Defense Electronics Integration</li>
-
-</ul>
-
+<div class="capability-item">
+<h3>Custom Solutions</h3>
+<p>Application-specific embedded electronics development.</p>
 </div>
 
 </div>
@@ -138,73 +156,64 @@ built for performance, precision, and long-term reliability.
 </section>
 
 
-<!-- VISION SECTION -->
 
-<!-- MISSION SECTION -->
+<!-- PCB IMAGE -->
 
-<section class="vision-mission-section">
-
-<div class="container vision-mission-grid">
-
-<div class="vision-box">
-
-<h2>Our Vision</h2>
-
-<p>
-To become a trusted national technology partner delivering advanced,
-reliable, and scalable embedded electronic solutions for strategic
-and mission-critical applications.
-</p>
-
-</div>
-
-<div class="mission-box">
-
-<h2>Our Mission</h2>
-
-<p>
-To engineer high-performance electronics systems through innovation,
-precision design practices, and strong quality processes supporting
-India’s defense and industrial growth.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="why-arks-section">
+<section>
 
 <div class="container">
 
-<h2>Why Choose ARKS</h2>
+<img src="images/about/pcb.png" alt="Embedded PCB Engineering"
+style="width:100%; border-radius:12px;">
 
-<p class="section-subtitle">
-Delivering reliability, engineering depth, and trusted partnerships
-across defense electronics programs.
-</p>
-
-<div class="why-grid">
-
-<div class="why-card">
-<h3>Proven Engineering Experience</h3>
-<p>Decades of embedded systems development expertise.</p>
 </div>
 
-<div class="why-card">
-<h3>Defense Sector Exposure</h3>
-<p>Strong collaboration with national defense organizations.</p>
+</section>
+
+
+
+<!-- STRATEGIC ECOSYSTEM -->
+
+<section>
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-tag">STRATEGIC ECOSYSTEM</span>
+
+<h2>
+Supporting National Research & Engineering Organizations
+</h2>
+
 </div>
 
-<div class="why-card">
-<h3>Quality-Driven Development</h3>
-<p>ISO-aligned engineering and validation workflows.</p>
+
+<div class="org-grid">
+
+<div class="org-card">
+<img src="images/clients/nstl.png">
+<p>NSTL</p>
 </div>
 
-<div class="why-card">
-<h3>End-to-End Capability</h3>
-<p>Concept to deployment lifecycle ownership.</p>
+<div class="org-card">
+<img src="images/clients/bdl.png">
+<p>BDL</p>
+</div>
+
+<div class="org-card">
+<img src="images/clients/drdo_tbrl.png">
+<p>TBRL</p>
+</div>
+
+<div class="org-card">
+<img src="images/clients/incois.png">
+<p>INCOIS</p>
+</div>
+
+<div class="org-card">
+<img src="images/clients/bhel.png">
+<p>BHEL</p>
 </div>
 
 </div>
@@ -213,40 +222,226 @@ across defense electronics programs.
 
 </section>
 
-<!-- FOOTER START -->
+<!-- ENGINEERING EXPERIENCE TIMELINE -->
+
+<section class="experience-timeline">
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-tag">ENGINEERING EXPERIENCE</span>
+
+<h2>
+Progressive Capability Development Across Strategic Programs
+</h2>
+
+<p>
+Supporting embedded electronics platforms through subsystem design,
+integration environments, and instrumentation-driven deployments.
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>Early Embedded Platform Development</h3>
+<p>Controller-level electronics supporting laboratory automation environments.</p>
+</div>
+</div>
+
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>Telemetry & Monitoring Systems</h3>
+<p>Structured acquisition platforms for instrumentation and diagnostics workflows.</p>
+</div>
+</div>
+
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>Communication Interface Modules</h3>
+<p>Subsystem connectivity solutions aligned with distributed electronics architectures.</p>
+</div>
+</div>
+
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>Power Electronics Integration</h3>
+<p>Reliable regulated supply platforms supporting embedded deployments.</p>
+</div>
+</div>
+
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+<div class="timeline-content">
+<h3>Strategic Laboratory Support Environments</h3>
+<p>Subsystem electronics aligned with national research ecosystem requirements.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ENGINEERING STRENGTHS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-heading">
+
+<span class="section-tag">ENGINEERING STRENGTHS</span>
+
+<h2>
+Reliable Subsystem Electronics Development Capability
+</h2>
+
+</div>
+
+<img src="images/about/control-room.png"
+alt="Control Room Engineering Environment"
+style="width:100%; border-radius:12px; margin-bottom:40px;">
+
+<div class="strengths-grid">
+
+<div class="strength-card">
+<h3>Program-Aligned Development</h3>
+<p>Solutions tailored to laboratory environments.</p>
+</div>
+
+<div class="strength-card">
+<h3>Indigenous Design</h3>
+<p>Locally engineered embedded architectures.</p>
+</div>
+
+<div class="strength-card">
+<h3>Integration Flexibility</h3>
+<p>Adaptable subsystem interface solutions.</p>
+</div>
+
+<div class="strength-card">
+<h3>Reliability-Focused Platforms</h3>
+<p>Designed for demanding operational conditions.</p>
+</div>
+
+<div class="strength-card">
+<h3>Lifecycle Support</h3>
+<p>Upgrade and redesign assistance.</p>
+</div>
+
+<div class="strength-card">
+<h3>Instrumentation Experience</h3>
+<p>Subsystem validation environment support.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
 
 <footer class="footer">
 
 <div class="container footer-grid">
 
-<div>
-<h3>Address</h3>
-<p>Padmanayani Nilayam, Sapthagiri nagar, Chinamushidiwada, Visakhapatnam, 530051.</p>
-</div>
+<div class="footer-about">
 
-<div>
-<h4>Contact</h4>
-<p>Visakhapatnam, India</p>
-<p>+91-XXXXXXXXXX</p>
-<p>info@company.com</p>
-</div>
+<h3>ARKS Micro Electronics India Pvt. Ltd.</h3>
 
-<div>
-<h4>Quick Links</h4>
-<p><a href="about.html">About</a></p>
-<p><a href="products.html">Products</a></p>
-<p><a href="services.html">Services</a></p>
-</div>
-
-</div>
-
-<p class="copyright">
-© 2026 ARKS Micro Electronics Pvt.Ltd. All rights reserved.
+<p>
+Embedded electronics platforms supporting defence laboratories
+and industrial automation environments.
 </p>
+
+</div>
+
+
+<div>
+
+<h4>Core Capabilities</h4>
+
+<ul>
+<li>Embedded Systems</li>
+<li>Telemetry Platforms</li>
+<li>Power Electronics</li>
+<li>Communication Interfaces</li>
+<li>Testing Systems</li>
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>Strategic Ecosystem</h4>
+
+<ul>
+<li>DRDO</li>
+<li>BEL</li>
+<li>NSTL</li>
+<li>TBRL</li>
+<li>INCOIS</li>
+<li>BHEL</li>
+</ul>
+
+</div>
+
+
+<div class="footer-links">
+
+<h4>Quick Links</h4>
+
+<ul>
+<li><a href="products.html">Products</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>Contact</h4>
+
+<p>Visakhapatnam, India</p>
+<p>Email: info@arksme.com</p>
+<p>Phone: +91-XXXXXXXXXX</p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+© 2026 ARKS Micro Electronics India Pvt. Ltd. All rights reserved.
+</p>
+
+</div>
 
 </footer>
 
-<!-- FOOTER END -->
 
 <script src="js/script.js"></script>
 

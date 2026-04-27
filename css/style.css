@@ -1,13 +1,13 @@
-/* =====================================================
-ARKS MICRO ELECTRONICS
-ENTERPRISE DEFENSE UI SYSTEM
-MASTER STYLESHEET — DESKTOP VERSION
-===================================================== */
+/* ======================================================
+ARKS MICRO ELECTRONICS — PROFESSIONAL DEFENCE UI SYSTEM
+Homepage Foundation Stylesheet
+Supports new index.html layout
+====================================================== */
 
 
-/* ===============================
-RESET
-=============================== */
+/* =========================
+GLOBAL RESET
+========================= */
 
 *{
 margin:0;
@@ -15,23 +15,21 @@ padding:0;
 box-sizing:border-box;
 }
 
-
-/* ===============================
-BODY
-=============================== */
+html{
+scroll-behavior:smooth;
+}
 
 body{
-font-family:"Inter", "Segoe UI", Arial, sans-serif;
-background:#f6f8fb;
+font-family:"Inter", sans-serif;
+background:#f7f9fc;
 color:#0b1c34;
 line-height:1.65;
--webkit-font-smoothing:antialiased;
 }
 
 
-/* ===============================
+/* =========================
 CONTAINER SYSTEM
-=============================== */
+========================= */
 
 .container{
 width:92%;
@@ -40,239 +38,235 @@ margin:auto;
 }
 
 
-/* ===============================
-TYPOGRAPHY SCALE
-=============================== */
+/* =========================
+TYPOGRAPHY
+========================= */
 
 h1{
-font-size:54px;
+font-size:52px;
 font-weight:700;
-letter-spacing:-.5px;
 }
-
 
 h2{
-font-size:42px;
-font-weight:600;
-margin-bottom:18px;
+font-size:38px;
+margin-bottom:16px;
 }
 
-
 h3{
-font-size:22px;
-font-weight:600;
+font-size:20px;
 margin-bottom:10px;
 }
 
-
 p{
-font-size:17px;
-color:#4b5f73;
+font-size:16px;
+color:#5b6f82;
 }
 
 
-/* ===============================
-SECTION SPACING SYSTEM
-=============================== */
+/* =========================
+SECTION SPACING
+========================= */
 
 section{
 padding:110px 0;
 }
 
 
-/* ===============================
+/* =========================
 HEADER
-=============================== */
+========================= */
 
 .header{
 background:#071a2f;
-padding:18px 0;
-box-shadow:0 6px 18px rgba(0,0,0,.15);
+color:white;
 position:sticky;
 top:0;
 z-index:999;
 }
 
-
-/* ===============================
-TOP HEADER STRUCTURE
-=============================== */
-
-.top-header{
-position:relative;
+.header-container{
 display:flex;
 align-items:center;
-height:72px;
+justify-content:space-between;
+height:80px;
 }
 
-
-/* LOGO */
-
-.logo-left{
-position:absolute;
-left:0;
+.logo-area img{
+height:52px;
 }
 
-
-.logo-left img{
-height:58px;
-}
-
-
-/* CENTER TITLE */
-
-.company-title-center{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-color:white;
-font-size:23px;
+.company-title{
+font-size:20px;
 font-weight:600;
-letter-spacing:.4px;
-}
-
-
-/* MENU ICON */
-
-.menu-icon{
-position:absolute;
-right:0;
-font-size:26px;
-color:white;
-cursor:pointer;
-transition:.25s ease;
-}
-
-
-.menu-icon:hover{
-transform:scale(1.08);
-}
-
-
-/* ===============================
-NAVIGATION BAR
-=============================== */
-
-.nav{
-display:flex;
-justify-content:center;
-gap:38px;
-margin-top:10px;
-}
-
-
-.nav a{
-color:#c9d6e3;
-text-decoration:none;
-font-size:15px;
-font-weight:500;
 letter-spacing:.3px;
+}
+
+.main-nav a{
+margin-left:28px;
+text-decoration:none;
+color:#c9d6e3;
+font-size:15px;
 transition:.25s ease;
 }
 
-
-.nav a:hover{
+.main-nav a:hover{
 color:#1f6feb;
 }
 
+.menu-toggle{
+display:none;
+font-size:24px;
+cursor:pointer;
+}
 
-/* ===============================
+
+/* =========================
 DROPDOWN MENU
-=============================== */
+========================= */
 
 .dropdown-menu{
-display:none;
 position:absolute;
-right:0;
-top:44px;
-background:#0b2a4a;
-min-width:200px;
-border-radius:6px;
+top:70px;
+left:0;
+width:100%;
+background:#071a2f;
+
 overflow:hidden;
-box-shadow:0 12px 28px rgba(0,0,0,.35);
-animation:fadeDropdown .2s ease;
-}
 
-
-@keyframes fadeDropdown{
-from{
+max-height:0;
 opacity:0;
-transform:translateY(-8px);
+
+transition:max-height 0.35s ease,
+opacity 0.25s ease;
+
+box-shadow:0 14px 30px rgba(0,0,0,0.35);
+z-index:999;
+
+backdrop-filter:blur(6px);
 }
 
-to{
+.dropdown-menu.open{
+max-height:420px;
 opacity:1;
-transform:translateY(0);
 }
-
-}
-
-
-/* DROPDOWN LINKS */
 
 .dropdown-menu a{
 display:block;
-padding:12px 18px;
-font-size:14px;
-color:#e2edf7;
+padding:14px 0;
+text-align:center;
+color:#e6edf5;
+font-size:15px;
 text-decoration:none;
-transition:.2s ease;
-}
+border-bottom:1px solid rgba(255,255,255,0.06);
 
+transition:background 0.25s ease;
+}
 
 .dropdown-menu a:hover{
-background:#123b66;
-padding-left:24px;
+background:#0b2a4a;
 }
 
 
-/* DIVIDER */
+/* =========================
+HERO SECTION
+========================= */
 
-.dropdown-divider{
-height:1px;
-background:#244e75;
-margin:6px 0;
+.hero{
+background:
+linear-gradient(135deg,#06192c,#0b2a4a,#133b63);
+color:white;
+text-align:center;
+padding:160px 0;
 }
 
+.hero p{
+max-width:720px;
+margin:auto;
+margin-top:18px;
+margin-bottom:36px;
+color:#c7d6e6;
+font-size:18px;
+}
 
-/* ===============================
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+/* =========================
+HERO VIDEO BACKGROUND
+========================= */
+
+.hero-video{
+position:relative;
+height:85vh;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+color:white;
+text-align:center;
+}
+
+.hero-bg-video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+filter: brightness(1.25) contrast(1.05);
+}
+
+.hero-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+rgba(6,25,44,0.45),
+rgba(6,25,44,0.25)
+);
+z-index:-1;
+}
+
+.hero-content h1{
+font-size:52px;
+max-width:900px;
+margin:auto;
+}
+
+.hero-content p{
+max-width:650px;
+margin:20px auto 40px auto;
+font-size:18px;
+color:#d6e3f2;
+}
+
+/* =========================
 BUTTON SYSTEM
-=============================== */
+========================= */
 
-.btn,
 .btn-primary{
-display:inline-block;
-padding:14px 38px;
-border-radius:40px;
 background:#1f6feb;
 color:white;
+padding:14px 32px;
+border-radius:40px;
 text-decoration:none;
 font-weight:600;
-letter-spacing:.3px;
-transition:.3s ease;
-box-shadow:0 6px 22px rgba(31,111,235,.35);
 }
-
-
-.btn:hover,
-.btn-primary:hover{
-background:#175ed1;
-transform:translateY(-2px);
-}
-
-
-/* OUTLINE BUTTON */
 
 .btn-outline{
-padding:14px 38px;
-border-radius:40px;
 border:2px solid #1f6feb;
 color:#1f6feb;
+padding:14px 32px;
+border-radius:40px;
 text-decoration:none;
 font-weight:600;
-transition:.3s ease;
 }
-
 
 .btn-outline:hover{
 background:#1f6feb;
@@ -280,2998 +274,622 @@ color:white;
 }
 
 
+/* =========================
+CAPABILITY STRIP
+========================= */
 
-/* ===============================
-HERO SECTION
-=============================== */
+.capabilities-strip{
+background:white;
+}
 
-.hero{
-background:
-linear-gradient(135deg,#06192c 0%, #0b2a4a 60%, #133b63 100%);
-color:white;
-text-align:center;
-padding:160px 0 150px 0;
-position:relative;
-overflow:hidden;
+.capabilities-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.capability-item{
+background:#f3f7fd;
+padding:32px;
+border-radius:12px;
 }
 
 
-/* subtle engineering glow layer */
-
-.hero::after{
-content:"";
-position:absolute;
-width:600px;
-height:600px;
-background:radial-gradient(circle, rgba(31,111,235,.25) 0%, transparent 70%);
-top:-120px;
-right:-150px;
-z-index:0;
-}
-
-
-.hero .container{
-position:relative;
-z-index:1;
-}
-
-
-.hero h1{
-font-size:56px;
-margin-bottom:26px;
-letter-spacing:-.4px;
-}
-
-
-.hero p{
-max-width:720px;
-margin:auto;
-font-size:19px;
-color:#c7d6e6;
-margin-bottom:40px;
-}
-
-
-/* ===============================
-SECTION TITLE BLOCK SYSTEM
-=============================== */
-
-.section-tag{
-display:inline-block;
-padding:6px 18px;
-border-radius:20px;
-background:#e8f0ff;
-color:#1f6feb;
-font-size:13px;
-font-weight:600;
-letter-spacing:.8px;
-margin-bottom:14px;
-}
-
+/* =========================
+SECTION HEADER BLOCK
+========================= */
 
 .section-heading{
 text-align:center;
 margin-bottom:60px;
 }
 
-
-.section-heading h2{
-margin-bottom:10px;
-}
-
-
-.section-heading p{
-max-width:650px;
-margin:auto;
-color:#5b6f82;
-}
-
-
-/* ===============================
-ABOUT PREVIEW SECTION
-=============================== */
-
-.about-preview{
-background:white;
-text-align:center;
-padding:120px 0;
-}
-
-
-.about-preview h2{
-margin-bottom:22px;
-}
-
-
-.about-preview p{
-max-width:720px;
-margin:auto;
-margin-bottom:36px;
-}
-
-
-/* CTA spacing refinement */
-
-.about-preview .btn{
-margin-top:6px;
-}
-
-
-/* ===============================
-CLIENTS SECTION
-=============================== */
-
-.clients{
-background:#eef3f8;
-text-align:center;
-padding:130px 0;
-}
-
-
-.clients-heading{
-margin-bottom:60px;
-}
-
-
-.clients-tag{
+.section-tag{
 display:inline-block;
-padding:6px 18px;
-border-radius:20px;
 background:#e8f0ff;
 color:#1f6feb;
+padding:6px 18px;
+border-radius:20px;
 font-size:13px;
-font-weight:600;
-letter-spacing:.8px;
 margin-bottom:10px;
 }
 
 
-.clients-heading h2{
-margin-bottom:8px;
+/* =========================
+STRATEGIC ORGANIZATIONS
+========================= */
+
+.org-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+text-align:center;
+}
+
+.org-card img{
+height:70px;
+margin:auto;
+margin-bottom:12px;
 }
 
 
-.clients-subtitle{
-color:#5b6f82;
+/* =========================
+TECH DOMAINS
+========================= */
+
+.domains-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:40px;
+}
+
+.domain-card{
+background:white;
+padding:36px;
+border-radius:14px;
+border:1px solid #e4edf5;
+}
+
+
+/* =========================
+PRODUCTS OVERVIEW
+========================= */
+
+.products-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.product-card{
+background:white;
+padding:36px;
+border-radius:14px;
+border:1px solid #e4edf5;
+transition:.3s ease;
+}
+
+.product-card:hover{
+transform:translateY(-6px);
+box-shadow:0 16px 40px rgba(0,0,0,.08);
+}
+
+.card-link{
+display:inline-block;
+margin-top:12px;
+color:#1f6feb;
+text-decoration:none;
+font-weight:600;
+}
+
+
+/* =========================
+SERVICES OVERVIEW
+========================= */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.service-card{
+background:white;
+padding:36px;
+border-radius:14px;
+border:1px solid #e4edf5;
+}
+
+
+/* =========================
+STRENGTHS GRID
+========================= */
+
+.strengths-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.strength-card{
+background:#f3f7fd;
+padding:30px;
+border-radius:12px;
+}
+
+
+/* =========================
+PROJECTS GRID
+========================= */
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.project-card{
+background:white;
+padding:30px;
+border-radius:14px;
+border:1px solid #e4edf5;
+}
+
+
+/* =========================
+COLLABORATION CTA
+========================= */
+
+.collaboration-cta{
+background:linear-gradient(120deg,#071a2f,#0b2a4a);
+color:white;
+text-align:center;
+}
+
+.cta-buttons{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+
+/* =========================
+FOOTER
+========================= */
+
+.footer{
+background:#020617;
+color:white;
+padding:80px 0 40px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:40px;
+}
+
+.footer h4{
+margin-bottom:14px;
+}
+
+.footer ul{
+list-style:none;
+}
+
+.footer ul li{
+margin-bottom:8px;
+font-size:14px;
+color:#9fb3c8;
+}
+
+.footer-about p{
+color:#9fb3c8;
+}
+
+.footer-links a{
+color:#9fb3c8;
+text-decoration:none;
+}
+
+.footer-links a:hover{
+color:white;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:40px;
+font-size:14px;
+color:#8fa3b8;
+}
+
+/* =====================================================
+FINAL PROFESSIONAL MOBILE VIEW (≤768px)
+Enterprise-grade responsive layout
+===================================================== */
+
+@media (max-width: 992px){
+.org-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media (max-width: 576px){
+.org-grid{
+grid-template-columns:repeat(1,1fr);
+}
+}
+
+@media (max-width:768px){
+
+/* GLOBAL RESET */
+
+html,body{
+overflow-x:hidden;
+font-size:15px;
+line-height:1.6;
+}
+
+/* CONTAINER */
+
+.container{
+width:92%;
+max-width:520px;
+margin:auto;
+}
+
+/* TYPOGRAPHY */
+
+h1{
+font-size:28px;
+line-height:1.25;
+letter-spacing:-.3px;
+}
+
+h2{
+font-size:24px;
+}
+
+h3{
 font-size:18px;
 }
 
+p{
+font-size:15px;
+color:#4b5563;
+}
+
+/* SECTION SPACING */
+
+section,
+.about-preview,
+.clients,
+.products-preview,
+.services-preview,
+.strengths-section,
+.projects-preview,
+.contact-strip,
+.how-we-work,
+.discuss-project{
+padding:48px 0;
+}
+
+/* HEADER */
+
+.top-header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:12px 16px;
+background:#ffffff;
+border-bottom:1px solid #e5e7eb;
+}
+
+.logo-left img{
+height:42px;
+}
+
+.company-title-center{
+flex:1;
+text-align:center;
+font-size:14px;
+font-weight:600;
+color:#0b1c34;
+line-height:1.25;
+padding:0 8px;
+}
+
+.menu-icon{
+font-size:20px;
+cursor:pointer;
+color:#0b1c34;
+}
+
+/* NAVIGATION GRID */
+
+.nav{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:8px;
+margin-top:8px;
+text-align:center;
+}
+
+.nav a{
+padding:8px 0;
+font-size:15px;
+font-weight:500;
+color:#e6edf5;
+}
+
+/* DROPDOWN MENU */
+
+.dropdown-menu{
+display:none;
+position:fixed;
+top:66px;
+left:0;
+width:100%;
+background:#0b2a4a;
+padding:10px 0;
+box-shadow:0 14px 32px rgba(0,0,0,.25);
+border-radius:0 0 12px 12px;
+z-index:1000;
+}
+
+.dropdown-menu.open{
+display:block;
+}
+
+.dropdown-menu a{
+display:block;
+padding:14px 0;
+font-size:15px;
+color:#e6edf5;
+text-align:center;
+}
+
+/* HERO SECTION */
+
+.hero{
+padding:56px 18px 48px;
+text-align:center;
+background:
+linear-gradient(135deg,#06192c 0%,#0b2a4a 60%,#133b63 100%);
+}
+
+.hero h1{
+margin-bottom:14px;
+}
+
+.hero p{
+max-width:420px;
+margin:auto;
+margin-bottom:22px;
+color:#c7d6e6;
+}
+
+/* BUTTON SYSTEM */
+
+.btn,
+.btn-primary,
+.btn-outline{
+padding:12px 28px;
+font-size:14px;
+border-radius:26px;
+box-shadow:0 8px 22px rgba(31,111,235,.35);
+}
 
 /* CLIENT GRID */
 
 .client-grid{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:35px;
-margin-top:40px;
+grid-template-columns:1fr;
+gap:16px;
 }
-
-
-/* CLIENT CARD */
 
 .client-item{
-background:white;
-padding:28px;
-border-radius:12px;
-border:1px solid #e3ebf5;
-transition:.35s ease;
-position:relative;
-overflow:hidden;
+background:#ffffff;
+padding:16px;
+border-radius:14px;
+box-shadow:0 6px 18px rgba(0,0,0,.05);
+text-align:center;
 }
-
-
-.client-item::after{
-content:"";
-position:absolute;
-
-inset:0;
-background:linear-gradient(120deg, transparent, rgba(31,111,235,.08), transparent);
-opacity:0;
-transition:.4s ease;
-}
-
-
-.client-item:hover{
-transform:translateY(-6px);
-box-shadow:0 14px 34px rgba(0,0,0,.08);
-}
-
-
-.client-item:hover::after{
-opacity:1;
-}
-
 
 .client-item img{
-width:120px;
-height:80px;
-object-fit:contain;
-margin-bottom:8px;
-}
-
-
-/* CLIENT LABEL */
-
-.client-item p{
-font-size:14px;
-font-weight:600;
-color:#0b1c34;
-}
-
-
-/* ===============================
-CARD SYSTEM (PREVIEW CARDS)
-=============================== */
-
-.card{
-
-background:white;
-
-padding:34px;
-
-border-radius:14px;
-
-border:1px solid #e4edf5;
-
-transition:.35s ease;
-
-position:relative;
-
-}
-
-
-.card::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-height:3px;
-
-width:0%;
-
-background:#1f6feb;
-
-transition:.35s ease;
-
-}
-
-
-.card:hover::before{
-
-width:100%;
-
-}
-
-
-.card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 16px 38px rgba(0,0,0,.08);
-
-}
-
-
-.card h3{
-
-margin-bottom:12px;
-
-}
-
-
-.card p{
-
-font-size:16px;
-
-}
-
-
-/* ===============================
-PRODUCTS PREVIEW
-=============================== */
-
-.products-preview{
-
-background:white;
-
-text-align:center;
-
-padding:130px 0;
-
-}
-
-
-.product-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:42px;
-
-max-width:1100px;
-
+width:80px;
 margin:auto;
-
-}
-
-
-/* VIEW ALL PRODUCTS BUTTON */
-
-.view-products-btn-wrapper{
-
-text-align:center;
-
-margin-top:60px;
-
-}
-
-
-.view-products-btn{
-
-display:inline-block;
-
-padding:14px 40px;
-
-border-radius:40px;
-
-border:2px solid #1f6feb;
-
-color:#1f6feb;
-
-font-weight:600;
-
-letter-spacing:.5px;
-
-text-decoration:none;
-
-transition:.3s ease;
-
-}
-
-
-.view-products-btn:hover{
-
-background:#1f6feb;
-
-color:white;
-
-transform:translateY(-2px);
-
-}
-
-
-/* ===============================
-SERVICES PREVIEW
-=============================== */
-
-.services-preview{
-
-background:#eef3f8;
-
-text-align:center;
-
-padding:130px 0;
-
-}
-
-
-/* SERVICES GRID */
-
-.service-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:40px;
-
-max-width:950px;
-
-margin:auto;
-
-}
-
-
-/* SERVICE BOX */
-
-.service-box{
-
-background:white;
-
-padding:36px;
-
-border-radius:14px;
-
-border:1px solid #e4edf5;
-
-transition:.35s ease;
-
-position:relative;
-
-}
-
-
-.service-box::before{
-
-content:"";
-
-position:absolute;
-
-left:0;
-
-bottom:0;
-
-height:3px;
-
-width:0%;
-
-background:#1f6feb;
-
-transition:.35s ease;
-
-}
-
-
-.service-box:hover::before{
-
-width:100%;
-
-}
-
-
-.service-box:hover{
-
-transform:translateY(-7px);
-
-box-shadow:0 16px 40px rgba(0,0,0,.08);
-
-}
-
-
-/* VIEW ALL SERVICES BUTTON */
-
-.view-services-btn-wrapper{
-
-margin-top:65px;
-
-}
-
-
-.view-services-btn{
-
-display:inline-block;
-
-padding:14px 40px;
-
-border-radius:40px;
-
-border:2px solid #1f6feb;
-
-color:#1f6feb;
-
-font-weight:600;
-
-text-decoration:none;
-
-transition:.3s ease;
-
-}
-
-
-.view-services-btn:hover{
-
-background:#1f6feb;
-
-color:white;
-
-transform:translateY(-2px);
-
-}
-
-
-
-
-/* ===============================
-STRENGTHS SECTION
-=============================== */
-
-.strengths-section{
-
-background:white;
-
-text-align:center;
-
-padding:130px 0;
-
-}
-
-
-/* GRID */
-
-.strengths-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:55px;
-
-max-width:1100px;
-
-margin:auto;
-
-}
-
-
-/* STRENGTH CARD */
-
-.strength-card{
-
-padding:20px 30px;
-
-transition:.35s ease;
-
-position:relative;
-
-}
-
-
-/* ICON CIRCLE (ENGINEERING STYLE) */
-
-.strength-icon{
-
-width:92px;
-
-height:92px;
-
-margin:auto;
-
-border-radius:50%;
-
-border:3px solid #1f6feb;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:34px;
-
-color:#1f6feb;
-
-margin-bottom:22px;
-
-transition:.35s ease;
-
-}
-
-
-/* ICON HOVER EFFECT */
-
-.strength-card:hover .strength-icon{
-
-background:#1f6feb;
-
-color:white;
-
-transform:scale(1.08);
-
-}
-
-
-/* TITLE */
-
-.strength-card h3{
-
-margin-bottom:10px;
-
-}
-
-
-/* TEXT */
-
-.strength-card p{
-
-font-size:16px;
-
-color:#5b6f82;
-
-}
-
-
-/* ===============================
-PROJECTS PREVIEW SECTION
-=============================== */
-
-.projects-preview{
-
-background:#eef3f8;
-
-text-align:center;
-
-padding:130px 0;
-
-}
-
-
-/* PROJECT GRID */
-
-.project-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:42px;
-
-max-width:1100px;
-
-margin:auto;
-
-}
-
-
-/* PROJECT CARD */
-
-.project-card{
-
-background:white;
-
-border-radius:14px;
-
-overflow:hidden;
-
-border:1px solid #e4edf5;
-
-transition:.35s ease;
-
-position:relative;
-
-}
-
-
-/* PROJECT IMAGE */
-
-.project-card img{
-
-width:100%;
-
-height:210px;
-
-object-fit:cover;
-
-}
-
-
-/* PROJECT BODY */
-
-.project-card-content{
-
-padding:28px;
-
-}
-
-
-.project-card h3{
-
-margin-bottom:8px;
-
-}
-
-
-.project-card p{
-
-font-size:15px;
-
-color:#5b6f82;
-
-}
-
-
-/* PROJECT HOVER */
-
-.project-card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 18px 45px rgba(0,0,0,.08);
-
-}
-
-
-/* ===============================
-CONTACT STRIP CTA (READY TO PARTNER)
-=============================== */
-
-.contact-strip{
-
-background:linear-gradient(120deg,#071a2f,#0b2a4a);
-
-text-align:center;
-
-color:white;
-
-padding:120px 0;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-
-/* SOFT GLOW EFFECT */
-
-.contact-strip::after{
-
-content:"";
-
-position:absolute;
-
-width:520px;
-
-height:520px;
-
-background:radial-gradient(circle, rgba(31,111,235,.35), transparent 70%);
-
-top:-150px;
-
-left:-140px;
-
-opacity:.5;
-
-}
-
-
-.contact-strip h2{
-
-font-size:42px;
-
-margin-bottom:18px;
-
-position:relative;
-
-z-index:1;
-
-}
-
-
-.contact-strip p{
-
-max-width:680px;
-
-margin:auto;
-
-margin-bottom:40px;
-
-color:#c7d6e6;
-
-position:relative;
-
-z-index:1;
-
-}
-
-
-/* BUTTON GROUP */
-
-.contact-buttons{
-
-display:flex;
-
-justify-content:center;
-
-gap:24px;
-
-position:relative;
-
-z-index:1;
-
-}
-
-
-/* ===============================
-HOW WE WORK (PROCESS SECTION)
-=============================== */
-
-.how-we-work{
-
-background:#eef3f8;
-
-text-align:center;
-
-padding:130px 0;
-
-}
-
-
-/* TAG */
-
-.process-tag{
-
-display:inline-block;
-
-padding:6px 18px;
-
-border-radius:20px;
-
-background:#e8f0ff;
-
-color:#1f6feb;
-
-font-size:13px;
-
-font-weight:600;
-
-letter-spacing:.7px;
-
-margin-bottom:10px;
-
-}
-
-
-/* SUBTITLE */
-
-.process-subtitle{
-
-max-width:600px;
-
-margin:auto;
-
-margin-bottom:60px;
-
-color:#5b6f82;
-
-}
-
-
-/* GRID */
-
-.process-grid{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:55px;
-
-}
-
-
-/* STEP CARD */
-
-.process-step{
-
-padding:20px 25px;
-
-transition:.35s ease;
-
-}
-
-
-/* ICON */
-
-.process-icon{
-
-width:92px;
-
-height:92px;
-
-margin:auto;
-
-border-radius:50%;
-
-border:3px solid #1f6feb;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:34px;
-
-margin-bottom:22px;
-
-transition:.35s ease;
-
-}
-
-
-/* HOVER */
-
-.process-step:hover .process-icon{
-
-background:#1f6feb;
-
-color:white;
-
-transform:scale(1.1);
-
-}
-
-
-/* ===============================
-DISCUSS PROJECT SECTION
-=============================== */
-
-.discuss-project{
-
-background:white;
-
-text-align:center;
-
-padding:130px 0;
-
-}
-
-
-/* TITLE */
-
-.discuss-project h2{
-
-margin-bottom:18px;
-
-}
-
-
-/* TEXT */
-
-.discuss-project p{
-
-max-width:680px;
-
-margin:auto;
-
-margin-bottom:40px;
-
-color:#5b6f82;
-
-}
-
-
-/* BUTTON WRAPPER */
-
-.discuss-buttons{
-
-display:flex;
-
-justify-content:center;
-
-gap:24px;
-
-}
-
-
-
-/* ===============================
-PAGE TITLE BANNER (ABOUT PAGE)
-=============================== */
-
-.page-title{
-
-background:
-linear-gradient(120deg,#071a2f,#0b2a4a);
-
-color:white;
-
-text-align:center;
-
-padding:140px 0;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-
-/* subtle glow */
-
-.page-title::after{
-
-content:"";
-
-position:absolute;
-
-width:520px;
-
-height:520px;
-
-background:radial-gradient(circle, rgba(31,111,235,.28), transparent 70%);
-
-top:-120px;
-
-right:-140px;
-
-opacity:.6;
-
-}
-
-
-/* TITLE */
-
-.page-title h1{
-
-font-size:48px;
-
-margin-bottom:12px;
-
-position:relative;
-
-z-index:1;
-
-}
-
-
-/* SUBTITLE */
-
-.page-title p{
-
-color:#c7d6e6;
-
-font-size:18px;
-
-position:relative;
-
-z-index:1;
-
-}
-
-
-/* ===============================
-ABOUT SECTION BASE
-=============================== */
-
-.about-section{
-
-background:white;
-
-padding:120px 0;
-
-}
-
-
-/* ALTERNATE BACKGROUND */
-
-.about-section.light-bg{
-
-background:#eef3f8;
-
-}
-
-
-/* ===============================
-ABOUT GRID STRUCTURE
-=============================== */
-
-.about-grid{
-
-display:grid;
-
-grid-template-columns:1.5fr 1fr;
-
-gap:80px;
-
-align-items:center;
-
-}
-
-
-/* LEFT CONTENT TEXT */
-
-.about-grid p{
-
-font-size:17px;
-
-margin-bottom:18px;
-
-}
-
-
-/* ===============================
-CAPABILITY HIGHLIGHT PANEL
-=============================== */
-
-.about-highlight-box{
-
-background:#f3f7fd;
-
-padding:45px;
-
-border-radius:14px;
-
-border:1px solid #dce6f4;
-
-position:relative;
-
-transition:.35s ease;
-
-}
-
-
-/* hover effect */
-
-.about-highlight-box:hover{
-
-transform:translateY(-6px);
-
-box-shadow:0 18px 45px rgba(0,0,0,.08);
-
-}
-
-
-/* TITLE */
-
-.about-highlight-box h3{
-
-margin-bottom:18px;
-
-}
-
-
-/* LIST */
-
-.about-highlight-box ul{
-
-list-style:none;
-
-padding:0;
-
-}
-
-
-/* LIST ITEM */
-
-.about-highlight-box li{
-
-padding-left:18px;
-
-margin-bottom:12px;
-
-position:relative;
-
-font-size:16px;
-
-color:#4b5f73;
-
-}
-
-
-/* bullet marker */
-
-.about-highlight-box li::before{
-
-content:"";
-
-width:6px;
-
-height:6px;
-
-border-radius:50%;
-
-background:#1f6feb;
-
-position:absolute;
-
-left:0;
-
-top:9px;
-
-}
-
-
-/* ===============================
-VISION / MISSION GRID
-=============================== */
-
-.vision-mission-grid{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:50px;
-
-}
-
-
-/* CARD BASE */
-
-.vision-card,
-.mission-card{
-
-background:white;
-
-padding:48px;
-
-border-radius:14px;
-
-border:1px solid #e4edf5;
-
-transition:.35s ease;
-
-position:relative;
-
-}
-
-
-/* TOP BORDER ACCENT */
-
-.vision-card::before,
-.mission-card::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-height:4px;
-
-width:0%;
-
-background:#1f6feb;
-
-transition:.35s ease;
-
-}
-
-
-/* HOVER EFFECT */
-
-.vision-card:hover::before,
-.mission-card:hover::before{
-
-width:100%;
-
-}
-
-
-/* CARD SHADOW HOVER */
-
-.vision-card:hover,
-.mission-card:hover{
-
-transform:translateY(-7px);
-
-box-shadow:0 18px 45px rgba(0,0,0,.08);
-
-}
-
-
-/* TEXT */
-
-.vision-card p,
-.mission-card p{
-
-color:#5b6f82;
-
-}
-
-
-/* ===============================
-WHY ARKS SECTION
-=============================== */
-
-.about-subtitle{
-
-max-width:650px;
-
-margin:auto;
-
-text-align:center;
-
-color:#5b6f82;
-
-font-size:18px;
-
-margin-bottom:60px;
-
-}
-
-
-/* GRID */
-
-.why-grid{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:32px;
-
-max-width:1100px;
-
-margin:auto;
-
-}
-
-
-/* CARD */
-
-.why-card{
-
-background:white;
-
-padding:38px;
-
-border-radius:14px;
-
-border:1px solid #e4edf5;
-
-transition:.35s ease;
-
-position:relative;
-
-}
-
-
-/* TOP ACCENT LINE */
-
-.why-card::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-height:4px;
-
-width:0%;
-
-background:#1f6feb;
-
-transition:.35s ease;
-
-}
-
-
-/* HOVER */
-
-.why-card:hover{
-
-transform:translateY(-7px);
-
-box-shadow:0 18px 45px rgba(0,0,0,.08);
-
-}
-
-
-/* ACCENT ANIMATION */
-
-.why-card:hover::before{
-
-width:100%;
-
-}
-
-
-/* TITLE */
-
-.why-card h3{
-
-margin-bottom:12px;
-
-}
-
-
-/* TEXT */
-
-.why-card p{
-
-color:#5b6f82;
-
-font-size:16px;
-
-}
-
-
-/* ===============================
-ABOUT SECTION HEADING ALIGNMENT
-=============================== */
-
-.about-section h2{
-
-margin-bottom:22px;
-
-}
-
-
-/* TEXT BLOCK WIDTH CONTROL */
-
-.about-section .container > p{
-
-max-width:780px;
-
-margin:auto;
-
-text-align:center;
-
-}
-
-
-
-/* ===============================
-PRODUCTS PAGE SECTION BASE
-=============================== */
-
-.products-page{
-
-background:white;
-
-padding:130px 0;
-
-text-align:center;
-
-}
-
-
-/* ===============================
-CATEGORY BAR WRAPPER
-=============================== */
-
-.category-bar{
-
-display:flex;
-
-justify-content:center;
-
-gap:22px;
-
-margin-bottom:60px;
-
-flex-wrap:wrap;
-
-}
-
-
-/* ===============================
-CATEGORY BUTTON
-=============================== */
-
-.category-btn{
-
-padding:12px 28px;
-
-border-radius:40px;
-
-border:1px solid #d6e3f5;
-
-background:white;
-
-font-size:15px;
-
-font-weight:600;
-
-letter-spacing:.3px;
-
-color:#0b1c34;
-
-cursor:pointer;
-
-transition:.3s ease;
-
-position:relative;
-
-}
-
-
-/* underline animation */
-
-.category-btn::after{
-
-content:"";
-
-position:absolute;
-
-bottom:-6px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-height:2px;
-
-width:0%;
-
-background:#1f6feb;
-
-transition:.3s ease;
-
-}
-
-
-.category-btn:hover::after{
-
-width:40%;
-
-}
-
-
-/* hover effect */
-
-.category-btn:hover{
-
-color:#1f6feb;
-
-border-color:#c9dbf9;
-
 }
-
-
-/* ACTIVE CATEGORY */
-
-.category-btn.active{
 
-background:#1f6feb;
+/* CARD SYSTEM */
 
-color:white;
-
-border-color:#1f6feb;
-
+.card,
+.service-card,
+.project-card,
+.product-card{
+border-radius:16px;
+padding:20px;
+box-shadow:0 10px 26px rgba(0,0,0,.06);
 }
 
+/* PRODUCT GRID */
 
-.category-btn.active::after{
-
-display:none;
-
+.product-grid,
+.service-grid,
+.project-grid,
+.services-grid,
+.projects-grid{
+grid-template-columns:1fr;
+gap:20px;
 }
-
 
-/* ===============================
-PRODUCT CATEGORY GRID
-=============================== */
+/* PRODUCT CATEGORY GRID */
 
 .product-category{
-
-display:none;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:36px;
-
-max-width:1050px;
-
-margin:auto;
-
-animation:fadeCategory .4s ease;
-
+grid-template-columns:1fr;
 }
-
-
-@keyframes fadeCategory{
-
-from{
-
-opacity:0;
-
-transform:translateY(12px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-
-/* DEFAULT ACTIVE CATEGORY */
-
-.product-category.embedded{
-
-display:grid;
-
-}
-
-
-/* ===============================
-PRODUCT CARD
-=============================== */
-
-.product-card{
-
-background:white;
-
-border-radius:14px;
-
-border:1px solid #e4edf5;
-
-overflow:hidden;
-
-text-align:left;
-
-transition:.35s ease;
-
-position:relative;
-
-}
-
-
-/* TOP ACCENT LINE */
-
-.product-card::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-height:4px;
-
-width:0%;
-
-background:#1f6feb;
-
-transition:.35s ease;
-
-}
-
-
-/* HOVER */
-
-.product-card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 18px 45px rgba(0,0,0,.08);
-
-}
-
-
-.product-card:hover::before{
-
-width:100%;
-
-}
-
-
-/* ===============================
-PRODUCT IMAGE
-=============================== */
-
-.product-card img{
-
-width:100%;
-
-height:200px;
-
-object-fit:cover;
-
-border-bottom:1px solid #eef2f8;
-
-}
-
-
-/* ===============================
-PRODUCT BODY
-=============================== */
 
 .product-card-content{
-
-padding:28px;
-
-}
-
-
-/* TITLE */
-
-.product-card h3{
-
-margin-bottom:10px;
-
-font-size:20px;
-
-}
-
-
-/* DESCRIPTION */
-
-.product-card p{
-
-font-size:16px;
-
-color:#5b6f82;
-
-line-height:1.6;
-
-}
-
-
-/* ===============================
-PRODUCT CARD HOVER LIGHT GLOW
-=============================== */
-
-.product-card:hover{
-
-background:linear-gradient(
-
-180deg,
-
-#ffffff 0%,
-
-#fbfdff 100%
-
-);
-
-}
-
-
-/* ===============================
-CATEGORY TRANSITION SMOOTHNESS
-=============================== */
-
-.product-category{
-
-transition:.3s ease;
-
-}
-
-
-/* ===============================
-VIEW ALL PRODUCTS BUTTON ALIGNMENT
-=============================== */
-
-.products-page .btn-outline{
-
-margin-top:50px;
-
-}
-
-
-/* ===============================
-PRODUCT PAGE TITLE ALIGNMENT
-=============================== */
-
-.products-page h2{
-
-margin-bottom:20px;
-
-}
-
-
-/* ===============================
-PRODUCT GRID TITLE SPACING
-=============================== */
-
-.product-category h3{
-
-margin-bottom:8px;
-
-}
-
-
-/* ===============================
-PRODUCT DESCRIPTION WIDTH CONTROL
-=============================== */
-
-.product-card p{
-
-max-width:90%;
-
-}
-
-
-
-/* ===============================
-SERVICES PAGE BASE SECTION
-=============================== */
-
-.services-page{
-
-background:white;
-
-padding:130px 0;
-
 text-align:center;
-
 }
 
+/* CATEGORY BUTTONS */
 
-/* ===============================
-SERVICES GRID
-=============================== */
-
-.services-grid{
-
+.category-bar{
 display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:40px;
-
-max-width:1100px;
-
-margin:auto;
-
+grid-template-columns:repeat(2,1fr);
+gap:10px;
 }
 
-
-/* ===============================
-SERVICE CARD
-=============================== */
-
-.service-card{
-
-background:white;
-
-padding:42px;
-
-border-radius:14px;
-
-border:1px solid #e4edf5;
-
-transition:.35s ease;
-
-position:relative;
-
-text-align:left;
-
-}
-
-
-/* ACCENT BAR */
-
-.service-card::before{
-
-content:"";
-
-position:absolute;
-
-left:0;
-
-top:0;
-
-height:4px;
-
-width:0%;
-
-background:#1f6feb;
-
-transition:.35s ease;
-
-}
-
-
-.service-card:hover::before{
-
+.category-btn{
 width:100%;
-
+font-size:14px;
+padding:10px 12px;
 }
 
+/* STRENGTHS */
 
-/* HOVER EFFECT */
-
-.service-card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 18px 45px rgba(0,0,0,.08);
-
+.strengths-grid{
+grid-template-columns:1fr;
+gap:20px;
 }
 
-
-/* SERVICE TITLE */
-
-.service-card h3{
-
-margin-bottom:12px;
-
-font-size:20px;
-
-}
-
-
-/* SERVICE TEXT */
-
-.service-card p{
-
-font-size:16px;
-
-color:#5b6f82;
-
-line-height:1.6;
-
-}
-
-
-/* ===============================
-SERVICE ICON STYLE
-=============================== */
-
-.service-icon{
-
-width:78px;
-
-height:78px;
-
-border-radius:50%;
-
-border:3px solid #1f6feb;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:30px;
-
-margin-bottom:20px;
-
-color:#1f6feb;
-
-transition:.35s ease;
-
-}
-
-
-/* ICON HOVER */
-
-.service-card:hover .service-icon{
-
-background:#1f6feb;
-
-color:white;
-
-transform:scale(1.08);
-
-}
-
-
-/* ===============================
-PROCESS SECTION (HOW WE WORK)
-=============================== */
-
-.how-we-work{
-
-background:#eef3f8;
-
-padding:140px 0;
-
-text-align:center;
-
-}
-
-
-/* PROCESS GRID */
+/* PROCESS SECTION */
 
 .process-grid{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:60px;
-
-max-width:1100px;
-
-margin:auto;
-
-position:relative;
-
+grid-template-columns:1fr;
+gap:24px;
 }
-
-
-/* CONNECTOR LINE */
 
 .process-grid::before{
-
-content:"";
-
-position:absolute;
-
-top:45px;
-
-left:10%;
-
-right:10%;
-
-height:2px;
-
-background:#dbe6f5;
-
-z-index:0;
-
+display:none;
 }
 
+/* ABOUT SECTION */
 
-/* PROCESS STEP */
-
-.process-step{
-
-position:relative;
-
-z-index:1;
-
-padding:20px;
-
-transition:.35s ease;
-
+.about-grid{
+grid-template-columns:1fr;
+gap:30px;
 }
 
+.vision-mission-grid{
+grid-template-columns:1fr;
+gap:24px;
+}
 
-/* PROCESS ICON */
+.why-grid{
+grid-template-columns:1fr;
+gap:24px;
+}
 
-.process-icon{
+/* CONTACT STRIP */
 
-width:92px;
-
-height:92px;
-
-margin:auto;
-
-border-radius:50%;
-
-border:3px solid #1f6feb;
-
-display:flex;
-
+.contact-buttons{
+flex-direction:column;
 align-items:center;
-
-justify-content:center;
-
-font-size:34px;
-
-margin-bottom:22px;
-
-background:white;
-
-transition:.35s ease;
-
+gap:14px;
 }
 
-
-/* ICON HOVER */
-
-.process-step:hover .process-icon{
-
-background:#1f6feb;
-
-color:white;
-
-transform:scale(1.12);
-
-}
-
-
-/* STEP TITLE */
-
-.process-step h3{
-
-margin-bottom:8px;
-
-}
-
-
-/* STEP TEXT */
-
-.process-step p{
-
-color:#5b6f82;
-
-font-size:15px;
-
-}
-
-
-/* ===============================
-PROCESS TAG LABEL
-=============================== */
-
-.process-tag{
-
-display:inline-block;
-
-padding:6px 18px;
-
-border-radius:20px;
-
-background:#e8f0ff;
-
-color:#1f6feb;
-
-font-size:13px;
-
-font-weight:600;
-
-letter-spacing:.7px;
-
-margin-bottom:10px;
-
-}
-
-
-/* PROCESS SUBTITLE */
-
-.process-subtitle{
-
-max-width:600px;
-
-margin:auto;
-
-margin-bottom:70px;
-
-color:#5b6f82;
-
-}
-
-
-/* ===============================
-DISCUSS PROJECT CTA SECTION
-=============================== */
-
-.discuss-project{
-
-background:white;
-
-text-align:center;
-
-padding:140px 0;
-
-}
-
-
-/* TITLE */
-
-.discuss-project h2{
-
-margin-bottom:18px;
-
-}
-
-
-/* TEXT */
-
-.discuss-project p{
-
-max-width:680px;
-
-margin:auto;
-
-margin-bottom:40px;
-
-color:#5b6f82;
-
-}
-
-
-/* BUTTON GROUP */
+/* DISCUSS PROJECT */
 
 .discuss-buttons{
-
-display:flex;
-
-justify-content:center;
-
-gap:28px;
-
-}
-
-
-/* BUTTON HOVER POLISH */
-
-.discuss-buttons a{
-
-transition:.3s ease;
-
-}
-
-
-.discuss-buttons a:hover{
-
-transform:translateY(-2px);
-
-}
-
-
-
-/* ===============================
-PROJECTS PAGE BASE SECTION
-=============================== */
-
-.projects-page{
-
-background:white;
-
-padding:130px 0;
-
-text-align:center;
-
-}
-
-
-/* ===============================
-PROJECTS GRID
-=============================== */
-
-.projects-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:42px;
-
-max-width:1100px;
-
-margin:auto;
-
-}
-
-
-/* ===============================
-PROJECT CARD
-=============================== */
-
-.project-card{
-
-position:relative;
-
-background:white;
-
-border-radius:14px;
-
-overflow:hidden;
-
-border:1px solid #e4edf5;
-
-transition:.4s ease;
-
-}
-
-
-/* TOP ACCENT LINE */
-
-.project-card::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-height:4px;
-
-width:0%;
-
-background:#1f6feb;
-
-transition:.35s ease;
-
-}
-
-
-.project-card:hover::before{
-
-width:100%;
-
-}
-
-
-/* ===============================
-PROJECT IMAGE
-=============================== */
-
-.project-card img{
-
-width:100%;
-
-height:220px;
-
-object-fit:cover;
-
-display:block;
-
-transition:.4s ease;
-
-}
-
-
-/* IMAGE ZOOM EFFECT */
-
-.project-card:hover img{
-
-transform:scale(1.05);
-
-}
-
-
-/* ===============================
-PROJECT CONTENT
-=============================== */
-
-.project-card-content{
-
-padding:28px;
-
-text-align:left;
-
-}
-
-
-.project-card h3{
-
-margin-bottom:10px;
-
-font-size:20px;
-
-}
-
-
-.project-card p{
-
-font-size:16px;
-
-color:#5b6f82;
-
-line-height:1.6;
-
-}
-
-
-/* ===============================
-HOVER SHADOW EFFECT
-=============================== */
-
-.project-card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 22px 50px rgba(0,0,0,.10);
-
-}
-
-
-/* ===============================
-OPTIONAL OVERLAY INFO PANEL
-(for future expansion)
-=============================== */
-
-.project-card-overlay{
-
-position:absolute;
-
-inset:0;
-
-background:rgba(7,26,47,.82);
-
-color:white;
-
-display:flex;
-
+flex-direction:column;
 align-items:center;
-
-justify-content:center;
-
-text-align:center;
-
-opacity:0;
-
-transition:.4s ease;
-
-padding:30px;
-
+gap:14px;
 }
 
-
-.project-card:hover .project-card-overlay{
-
-opacity:1;
-
-}
-
-
-/* ===============================
-PROJECT OVERLAY TEXT
-=============================== */
-
-.project-card-overlay h4{
-
-font-size:22px;
-
-margin-bottom:12px;
-
-}
-
-
-.project-card-overlay p{
-
-font-size:15px;
-
-color:#d7e4f2;
-
-}
-
-
-/* ===============================
-SECTION TITLE ALIGNMENT
-=============================== */
-
-.projects-page h2{
-
-margin-bottom:22px;
-
-}
-
-
-/* ===============================
-SECTION SUBTITLE STYLE
-=============================== */
-
-.projects-page .section-subtitle{
-
-max-width:650px;
-
-margin:auto;
-
-margin-bottom:60px;
-
-color:#5b6f82;
-
-}
-
-
-/* ===============================
-GRID BREATHING SPACE CONTROL
-=============================== */
-
-.projects-grid .project-card{
-
-margin-bottom:5px;
-
-}
-
-
-
-/* ===============================
-CONTACT PAGE BASE
-=============================== */
-
-.contact-page{
-
-background:white;
-
-padding:140px 0;
-
-}
-
-
-/* ===============================
-CONTACT LAYOUT GRID
-=============================== */
+/* CONTACT PAGE */
 
 .contact-layout{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:80px;
-
-max-width:1100px;
-
-margin:auto;
-
-align-items:start;
-
+grid-template-columns:1fr;
+gap:30px;
 }
-
-
-/* ===============================
-CONTACT INFO BLOCK
-=============================== */
-
-.contact-info h3{
-
-margin-bottom:14px;
-
-}
-
-
-.contact-info p{
-
-margin-bottom:18px;
-
-color:#5b6f82;
-
-font-size:16px;
-
-}
-
-
-/* ===============================
-CONTACT FORM WRAPPER
-=============================== */
 
 .contact-form{
-
-background:#f7faff;
-
-padding:45px;
-
-border-radius:14px;
-
-border:1px solid #dfe9f8;
-
-transition:.35s ease;
-
+padding:22px;
 }
 
-
-/* subtle elevation */
-
-.contact-form:hover{
-
-box-shadow:0 18px 40px rgba(0,0,0,.07);
-
-}
-
-
-/* ===============================
-FORM LABELS
-=============================== */
-
-.contact-form label{
-
-display:block;
-
-margin-bottom:6px;
-
-font-size:14px;
-
-font-weight:600;
-
-color:#0b1c34;
-
-}
-
-
-/* ===============================
-FORM INPUTS
-=============================== */
-
-.contact-form input,
-.contact-form textarea,
-.contact-form select{
-
-width:100%;
-
-padding:14px;
-
-border-radius:6px;
-
-border:1px solid #ccd8e4;
-
-font-size:15px;
-
-margin-bottom:20px;
-
-transition:.25s ease;
-
-background:white;
-
-}
-
-
-/* INPUT FOCUS EFFECT */
-
-.contact-form input:focus,
-.contact-form textarea:focus,
-.contact-form select:focus{
-
-outline:none;
-
-border-color:#1f6feb;
-
-box-shadow:0 0 0 3px rgba(31,111,235,.15);
-
-}
-
-
-/* ===============================
-SUBMIT BUTTON
-=============================== */
-
-.contact-form button{
-
-padding:14px 32px;
-
-border:none;
-
-border-radius:40px;
-
-background:#1f6feb;
-
-color:white;
-
-font-weight:600;
-
-cursor:pointer;
-
-transition:.3s ease;
-
-}
-
-
-.contact-form button:hover{
-
-background:#175ed1;
-
-transform:translateY(-2px);
-
-}
-
-
-/* ===============================
-CAREERS HERO SECTION
-=============================== */
-
-.careers-hero{
-
-background:
-
-linear-gradient(rgba(7,26,47,.82), rgba(7,26,47,.82));
-
-color:white;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-height:420px;
-
-text-align:center;
-
-position:relative;
-
-}
-
-
-/* HERO CONTENT WRAPPER */
-
-.careers-hero .container{
-
-max-width:800px;
-
-}
-
-
-/* HERO TITLE */
-
-.careers-hero h1{
-
-font-size:48px;
-
-margin-bottom:18px;
-
-}
-
-
-/* HERO TEXT */
-
-.careers-hero p{
-
-font-size:18px;
-
-color:#d2e1f0;
-
-}
-
-
-/* ===============================
-CAREERS CONTENT SECTION
-=============================== */
-
-.careers-section{
-
-background:white;
-
-padding:120px 0;
-
-}
-
-
-/* CAREERS GRID */
+/* CAREERS PAGE */
 
 .careers-grid{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:50px;
-
-max-width:1000px;
-
-margin:auto;
-
+grid-template-columns:1fr;
+gap:22px;
 }
 
-
-/* CAREERS CARD */
-
-.career-card{
-
-background:#f7faff;
-
-padding:40px;
-
-border-radius:14px;
-
-border:1px solid #e1ebf8;
-
-transition:.35s ease;
-
+.careers-hero{
+padding:60px 0;
 }
 
-
-/* HOVER EFFECT */
-
-.career-card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 18px 45px rgba(0,0,0,.08);
-
-}
-
-
-/* TITLE */
-
-.career-card h3{
-
-margin-bottom:10px;
-
-}
-
-
-/* DESCRIPTION */
-
-.career-card p{
-
-color:#5b6f82;
-
-font-size:16px;
-
-}
-
-
-/* APPLY BUTTON SPACING */
-
-.career-card .btn{
-
-margin-top:12px;
-
-}
-
-
-/* ===============================
-FOOTER BASE
-=============================== */
-
-.footer{
-
-background:#020617;
-
-color:white;
-
-padding:80px 0 35px 0;
-
-}
-
-
-/* FOOTER GRID */
-
-.footer-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:45px;
-
-max-width:1100px;
-
-margin:auto;
-
-}
-
-
-/* FOOTER HEADINGS */
-
-.footer h3{
-
-margin-bottom:14px;
-
-font-size:18px;
-
-}
-
-
-/* FOOTER TEXT */
-
-.footer p{
-
-font-size:15px;
-
-color:#9fb3c8;
-
-}
-
-
-/* FOOTER LINKS */
-
-.footer a{
-
-display:block;
-
-margin-bottom:8px;
-
-color:#9fb3c8;
-
-text-decoration:none;
-
-font-size:15px;
-
-transition:.25s ease;
-
-}
-
-
-.footer a:hover{
-
-color:white;
-
-padding-left:4px;
-
-}
-
-
-/* ===============================
-FOOTER DIVIDER
-=============================== */
-
-.footer-divider{
-
-height:1px;
-
-background:#1e293b;
-
-margin:35px 0 25px 0;
-
-}
-
-
-/* COPYRIGHT TEXT */
-
-.copyright{
-
-text-align:center;
-
-font-size:14px;
-
-color:#8fa3b8;
-
-}
-
-
-/* ===============================
-UTILITY LINK SYSTEM
-=============================== */
-
-a{
-
-transition:.25s ease;
-
-}
-
-
-/* ===============================
-GLOBAL IMAGE ALIGNMENT FIX
-=============================== */
-
-img{
-
-max-width:100%;
-
-display:block;
-
-}
-
-
-/* ===============================
-SECTION TITLE SPACING FIX
-=============================== */
-
-section h2{
-
-margin-bottom:18px;
-
-}
-
-
-/* ===============================
-FINAL CARD HOVER STANDARDIZATION
-=============================== */
-
-.service-card:hover,
-.product-card:hover,
-.project-card:hover,
-.why-card:hover,
-.career-card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 18px 45px rgba(0,0,0,.08);
-
-}
-
-
-/* ===============================
-FINAL BUTTON CONSISTENCY
-=============================== */
-
-button{
-
-font-family:"Inter", sans-serif;
-
-}
-
-
-
-/* =====================================================
-MOBILE RESPONSIVE DESIGN (≤768px)
-Add this at the END of style.css
-Desktop layout remains unchanged
-===================================================== */
-
-@media (max-width:768px){
-
-/* CONTAINER WIDTH */
-
-.container{
-width:92%;
-}
-
-
-/* TYPOGRAPHY SCALE */
-
-h1{
-font-size:34px;
-}
-
-h2{
+.careers-hero h1{
 font-size:28px;
 }
 
+/* PAGE TITLE */
+
+.page-title{
+padding:55px 0;
+}
+
+.page-title h1{
+font-size:28px;
+}
+
+/* FOOTER */
+
+.footer-grid{
+grid-template-columns:1fr;
+gap:22px;
+text-align:center;
+}
+
+.footer{
+padding:46px 0 26px;
+}
+
+.footer h3{
+font-size:16px;
+margin-bottom:10px;
+}
+
+.footer p,
+.footer a{
+font-size:14px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================
+MOBILE RESPONSIVE SYSTEM (INDEX.HTML)
+Professional Defence Layout Mobile Optimization
+====================================================== */
+
+@media (max-width:768px){
+
+/* =========================
+GLOBAL TYPOGRAPHY
+========================= */
+
+h1{
+font-size:28px;
+line-height:1.3;
+}
+
+h2{
+font-size:24px;
+}
+
 h3{
-font-size:20px;
+font-size:18px;
 }
 
 p{
@@ -3279,215 +897,134 @@ font-size:15px;
 }
 
 
-/* GLOBAL SECTION SPACING */
+/* =========================
+SECTION SPACING
+========================= */
 
 section{
-padding:70px 0;
+padding:60px 0;
 }
 
 
-/* HEADER LAYOUT */
+/* =========================
+HEADER MOBILE
+========================= */
 
-/* PROFESSIONAL MOBILE HEADER LAYOUT */
-
-.top-header{
-display:grid;
-grid-template-columns:auto 1fr auto;
-align-items:center;
-padding:12px 14px;
-row-gap:4px;
-}
-
-
-/* LOGO */
-
-.logo-left{
-grid-column:1;
-grid-row:1 / span 2;
-display:flex;
-align-items:center;
-}
-
-.logo-left img{
-height:42px;
-}
-
-
-/* COMPANY TITLE */
-
-.company-title-center{
-font-size:clamp(13px, 3.2vw, 15px);
-font-weight:600;
-letter-spacing:.2px;
-}
-
-/* MENU ICON */
-
-.menu-icon{
-grid-column:3;
-grid-row:1 / span 2;
-font-size:22px;
-cursor:pointer;
-display:flex;
-align-items:center;
-justify-content:flex-end;
-}
-
-
-/* NAVIGATION STACK */
-
-.nav{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:12px;
-margin-top:14px;
-text-align:center;
-}
-
-.nav a{
-padding:8px 0;
-}
-
-
-/* HERO SECTION */
-
-.hero{
-padding:100px 12px 90px 12px;
-}
-
-.hero h1{
-font-size:34px;
-line-height:1.3;
-}
-
-.hero p{
-font-size:16px;
-}
-
-
-/* CLIENT GRID */
-
-.client-grid{
-grid-template-columns:repeat(1,1fr);
-gap:18px;
-}
-
-.client-item img{
-width:90px;
+.header-container{
+flex-direction:row;
+justify-content:space-between;
 height:auto;
+padding:14px 0;
 }
 
-.client-item{
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
+.company-title{
+font-size:14px;
 text-align:center;
+padding:0 6px;
 }
 
-/* PRODUCTS PREVIEW GRID */
-
-.product-grid{
-grid-template-columns:1fr;
-gap:24px;
-}
-
-
-/* SERVICES PREVIEW GRID */
-
-.service-grid{
-grid-template-columns:1fr;
-gap:24px;
-}
-
-
-/* STRENGTHS GRID */
-
-.strengths-grid{
-grid-template-columns:1fr;
-gap:28px;
-}
-
-
-/* PROJECT GRID (HOME PAGE) */
-
-.project-grid{
-grid-template-columns:1fr;
-gap:24px;
-}
-
-
-/* CONTACT STRIP BUTTONS */
-
-.contact-buttons{
-flex-direction:column;
-gap:16px;
-}
-
-
-/* PROCESS GRID (HOW WE WORK) */
-
-.process-grid{
-grid-template-columns:1fr;
-gap:28px;
-}
-
-.process-grid::before{
+.main-nav{
 display:none;
 }
 
-
-/* ABOUT PAGE GRID */
-
-.about-grid{
-grid-template-columns:1fr;
-gap:40px;
+.menu-toggle{
+display:block;
+color:white;
+font-size:24px;
+cursor:pointer;
 }
 
+/* =========================
+DROPDOWN MENU MOBILE
+========================= */
 
-/* VISION / MISSION GRID */
-
-.vision-mission-grid{
-grid-template-columns:1fr;
-gap:30px;
-}
-
-
-/* WHY ARKS GRID */
-
-.why-grid{
-grid-template-columns:1fr;
-gap:24px;
-}
-
-
-/* PRODUCTS PAGE CATEGORY BAR */
-
-.category-bar{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
+.dropdown-menu{
+position:absolute;
+top:70px;
+left:0;
 width:100%;
+background:#071a2f;
+z-index:999;
 }
 
-.category-btn{
-width:100%;
+.dropdown-menu a{
 text-align:center;
-font-size:14px;
-padding:10px 12px;
+padding:14px 0;
+border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 
+/* =========================
+HERO VIDEO SECTION MOBILE
+========================= */
 
-/* PRODUCT CATEGORY GRID */
+.hero-video{
+height:70vh;
+padding:40px 20px;
+}
 
-.product-category{
+.hero-content h1{
+font-size:26px;
+}
+
+.hero-content p{
+font-size:15px;
+max-width:90%;
+}
+
+.hero-buttons{
+flex-direction:column;
+gap:12px;
+}
+
+
+/* =========================
+CAPABILITY STRIP MOBILE
+========================= */
+
+.capabilities-grid{
+grid-template-columns:1fr;
+gap:20px;
+}
+
+
+/* =========================
+STRATEGIC ORGANIZATIONS MOBILE
+========================= */
+
+.org-grid{
+grid-template-columns:repeat(1,1fr);
+gap:24px;
+}
+
+.org-card img{
+height:55px;
+}
+
+
+/* =========================
+TECH DOMAINS MOBILE
+========================= */
+
+.domains-grid{
 grid-template-columns:1fr;
 gap:24px;
 }
 
 
-/* SERVICES PAGE GRID */
+/* =========================
+PRODUCTS GRID MOBILE
+========================= */
+
+.products-grid{
+grid-template-columns:1fr;
+gap:24px;
+}
+
+
+/* =========================
+SERVICES GRID MOBILE
+========================= */
 
 .services-grid{
 grid-template-columns:1fr;
@@ -3495,7 +1032,19 @@ gap:24px;
 }
 
 
-/* PROJECTS PAGE GRID */
+/* =========================
+STRENGTHS GRID MOBILE
+========================= */
+
+.strengths-grid{
+grid-template-columns:1fr;
+gap:24px;
+}
+
+
+/* =========================
+PROJECTS GRID MOBILE
+========================= */
 
 .projects-grid{
 grid-template-columns:1fr;
@@ -3503,91 +1052,38 @@ gap:24px;
 }
 
 
-/* CONTACT PAGE LAYOUT */
+/* =========================
+CTA SECTION MOBILE
+========================= */
 
-.contact-layout{
-grid-template-columns:1fr;
-gap:40px;
+.cta-buttons{
+flex-direction:column;
+gap:12px;
 }
 
 
-/* CONTACT FORM */
-
-.contact-form{
-padding:28px;
-}
-
-
-/* CAREERS GRID */
-
-.careers-grid{
-grid-template-columns:1fr;
-gap:28px;
-}
-
-
-/* FOOTER GRID */
+/* =========================
+FOOTER MOBILE
+========================= */
 
 .footer-grid{
 grid-template-columns:1fr;
-gap:30px;
+gap:28px;
 text-align:center;
 }
 
-
-/* DROPDOWN MENU POSITION FIX */
-
-.dropdown-menu{
-right:10px;
-top:50px;
+.footer h4{
+margin-top:10px;
 }
 
-
-/* BUTTON SIZE IMPROVEMENT */
-
-.btn,
-.btn-primary,
-.btn-outline{
-padding:12px 26px;
-font-size:14px;
+.footer-about{
+max-width:90%;
+margin:auto;
 }
 
-
-/* PAGE TITLE SECTION */
-
-.page-title{
-padding:90px 0;
-}
-
-.page-title h1{
-font-size:32px;
-}
-
-
-/* CAREERS HERO */
-
-.careers-hero{
-height:auto;
-padding:90px 0;
-}
-
-.careers-hero h1{
-font-size:32px;
-}
-
-
-/* DISCUSS PROJECT BUTTON GROUP */
-
-.discuss-buttons{
-flex-direction:column;
-gap:16px;
-}
-
-
-/* PRODUCT CARD IMAGE HEIGHT */
-
-.product-card img{
-height:auto;
+.footer-bottom{
+font-size:13px;
+padding:10px 20px;
 }
 
 }
